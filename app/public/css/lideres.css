@@ -1,0 +1,110 @@
+#table{
+	height: 10px;
+	font-family: calibri;
+	font-weight: bold;
+	font-size: 16px;
+	border: 2px solid black;
+}
+
+#table thead{
+	height: 10px;
+	font-family: calibri;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: #C62050;
+	border: 1px solid black;
+	color: #FFF;
+}
+
+#table tbody{
+	height: 10px;
+	font-family: calibri;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: #EEE;
+	border: 1px solid black;
+	color: #000;
+}
+
+#hRanking{
+	font-family: BankGothic Md BT, fantasy;
+	font-size: 30px;
+	padding: 1em;
+	color: #FFF;
+}
+#hRanking h3{
+	font-family: BankGothic Md BT, fantasy;
+	font-size: 40px;
+	padding: 1em;
+	color: #fff5dd;
+	text-shadow: 2px 1px 4px #C62050;
+}
+
+/* Padrões */
+#default_button {
+	padding: 1em;
+	min-width: 180px;
+	max-width: 300px;
+	border: 0px solid #000;
+	border-radius: 0px;
+	display:inline-block;
+	cursor:pointer;
+	-webkit-transition: .5s;
+	transition: .5s;
+	font-family: Humnst777 BT, calibri, arial;
+	font-size: 18px;
+	padding:6px 10px;
+	text-decoration:none;
+	box-shadow: 0px 3px 8px #000;
+	background:linear-gradient(to bottom, #003e83 10%, #0063d0 100%);
+	color: #FFF;
+}
+
+#default_button:hover {
+	background:linear-gradient(to bottom, #0157b7 10%, #0078fc 100%);
+	-webkit-transition: .5s;
+	transition: .5s;
+	color: #000;
+}
+
+#header {
+	font-family: Vladimir Script;
+	font-size: 60px;
+	text-align: center;
+	text-shadow:0px 4px 0px #000;
+	color: #888;
+}
+
+#subheader {
+	font-family: Vladimir Script;
+	font-size: 50px;
+	text-align: center;
+	text-shadow:0px 2px 4px #000;
+	color: #888;
+}
+/* Planos de Fundo*/
+.fundo {
+	background-color: #0a131a;
+	font-family: verdana;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* Arquivos Padrões */
+html, body {
+	margin: 0;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+footer {
+	font-family: verdana;
+	font-size: 14px;
+	color: #FFF;
+	text-align: right;
+	text-shadow:0px 0px 8px #FF0;
+	padding-bottom: 3em;
+	padding-top: 8em;
+	padding-right: 3em;
+}
