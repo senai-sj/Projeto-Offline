@@ -22,6 +22,7 @@ html, body {
 
 #form {
 	padding: 1em;
+	position: relative;
 	font-family: verdana;
 	font-size: 15px;
 	text-align: center;
