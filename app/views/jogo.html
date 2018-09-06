@@ -3,15 +3,35 @@
 <head>
 	<title>SlideQuest - Jogo</title>
 	<link href="../public/css/jogo.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="../public/js/Jquery.js"></script>
+	<script type="text/javascript" src="../public/js/funcoes.js"></script>
 </head>
 <body class="fundo">
 <div id="subheader">
 <h1>Estágio <i>1/20</i></h1>
 </div>
-<div>
+<div class="pianista">
+	<div class="inicio" onclick="start();">
+		<h1>Instruções</h1><br>
+		<p>Clique nas teclas que estão caindo para eliminá-las.</p>
+		<p>Cada tecla concede 10 pontos quando eliminada.</p>
+		<p>Não deixa as teclas passarem da zona de risco!</p>
+		<p>Cada tecla que escapar desconta uma vida.</p>
+		<p>Boa Sorte!</p><br>
+		<h3>Clique aqui para iniciar</h3>
+	</div>
+	<div id="laser"></div>
+	<div id="tecla_A"></div>
+	<div id="tecla_B"></div>
+	<div class="fim" onclick="reiniciar();"></div>
+</div>
+<div id="placar" onload="pontos()"></div>
+<div id="saude" onload="vidas()"></div>
+<div id="buttonrow">
 <a href="menu.html"><button name="btnSair" id="default_button">Sair</button></a>
 <a href="jogo.html"><button name="btnReiniciar" id="default_button">Reiniciar</button></a>
 <button name="btnProximaFase" id="default_button">Proxima Fase</button>
+</div>
 <footer>
 	Version 0.2 &copy Copyright SENAI - All Rights Reserved
 </footer>
