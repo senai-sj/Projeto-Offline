@@ -67,6 +67,7 @@ html, body {
 	margin-right:auto;
 	width: 620px;
 	height: 540px;
+	top: -35px;
 }
 
 footer {
@@ -76,7 +77,7 @@ footer {
 	text-align: right;
 	text-shadow:0px 0px 8px #FF0;
 	padding-bottom: 3em;
-	padding-top: 12em;
+	padding-top: 4em;
 	padding-right: 3em;
 }
 
@@ -93,7 +94,7 @@ footer {
 	width: 400px;
 	height: 350px;
 	top: 75px;
-	left: 150px;
+	left: 120px;
 }
 .fim {
 	padding: 1em;
@@ -107,7 +108,7 @@ footer {
 	width: 400px;
 	height: 200px;
 	top: 75px;
-	left: 150px;
+	left: 120px;
 	cursor: pointer;
 }
 
@@ -156,8 +157,9 @@ footer {
 	padding: 1em;
 	position: relative;
 	color: white;
-	background-color: #091426;
-	width: 696px;
+	text-shadow:0px 0px 8px #FF0;
+	background-color: #C93268AA;
+	width: 616px;
 	height: 20px;
 	font-family: verdana;
 	font-size: 18px;
@@ -171,10 +173,11 @@ footer {
 }
 #saude {
 	padding: 1em;
-	position: center;
+	position: relative;
 	color: white;
+	text-shadow:0px 0px 8px #FF0;
 	width: 716px;
-	height: 20px;
+	height: 0px;
 	font-family: verdana;
 	font-size: 18px;
 	text-align: right;
@@ -183,7 +186,7 @@ footer {
 }
 #saude p {
 	position: absolute;
-	top: 694px;
-	left: 975px;
+	top: -56px;
+	left: 600px;
 }
 /* fim do Código Copiado*/

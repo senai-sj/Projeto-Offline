@@ -54,6 +54,31 @@ html, body {
 	transition: .5s;
 	color: #000;
 }
+#game_button {
+	padding: 1em;
+	min-width: 180px;
+	max-width: 200px;
+	border: 0px solid #000;
+	border-radius: 0px;
+	display:inline-block;
+	cursor:pointer;
+	-webkit-transition: .5s;
+	transition: .5s;
+	font-family: Humnst777 BT, calibri, arial;
+	font-size: 18px;
+	padding:6px 10px;
+	text-decoration:none;
+	box-shadow: 0px 3px 8px #000;
+	background:linear-gradient(to bottom, #67ba09 25%, #81e212 75%);
+	color: #FFF;
+}
+
+#game_button:hover {
+	background:linear-gradient(to bottom, #81e212 25%, #67ba09 75%);
+	-webkit-transition: .5s;
+	transition: .5s;
+	color: #000;
+}
 
 .fundo {
 	background-color: #0a131a;

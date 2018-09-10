@@ -1,4 +1,4 @@
-alert("Eae");
+// alert("Eae");
 
 $(document).ready(function() {
 	
@@ -22,16 +22,28 @@ function start() {
 	// musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	// musica.play();
   
-
 var pontos = 0;
-var vida=20;
+var vida=10;
 var jogo = {};
 jogo.press = [];
+
+var TECLA = {
+	// WASD
+	W:87,
+	A:65,
+	S:83,
+	D:68,
+
+	// Setas do Teclado
+	UP:38,
+	LEFT:39,
+	DOWN:40,
+	RIGHT:37,
+}
 
 $(function() {
 
 	jogo.timer = setInterval(loop,10);
-
 
 });
 
@@ -41,11 +53,24 @@ function loop() {
 	objA();
 	objB();
 }
-// Cores
-function degradeBomba() {
-var cor=0;
+document.getElementById("tecla_A").addEventListener("click", cliqueTecla);
+document.getElementById("tecla_B").addEventListener("click", cliqueTeclaB);
 
+function cliqueTecla() {
+   	respawn = parseInt(Math.random()*610);
+	$("#tecla_A").css("left",respawn);
+	$("#tecla_A").css("top", 0);
+   	pontos+=10;
+   }
+
+function cliqueTeclaB() {
+    document.getElementById("tecla_B");
+    respawn = parseInt(Math.random()*610);
+		$("#tecla_B").css("left",respawn);
+		$("#tecla_B").css("top", 0);
+    pontos+=10;
 }
+
 // Funções primárias
 function vidas() {
 
@@ -78,33 +103,13 @@ function objB() {
 		$("#tecla_B").css("left",respawn);
 		$("#tecla_B").css("top", 0);
 
-	if (posicaoY == 475) {
 		// somTiro.play();
-	if (vida <= 0) {
+	if (vida == 0) {
 			vida==0;
 			fim();
 		}
-	vida-=1;
+		vida-=1;
 	}
-	}
-}
-
-document.getElementById("tecla_A").addEventListener("click", cliqueTecla);
-document.getElementById("tecla_B").addEventListener("click", cliqueTeclaB);
-
-function cliqueTecla() {
-    document.getElementById("tecla_A");
-    respawn = parseInt(Math.random()*620);
-		$("#tecla_A").css("left",respawn);
-		$("#tecla_A").css("top", 0);
-    pontos+=10;
-}
-function cliqueTeclaB() {
-    document.getElementById("tecla_B");
-    respawn = parseInt(Math.random()*620);
-		$("#tecla_B").css("left",respawn);
-		$("#tecla_B").css("top", 0);
-    pontos+=10;
 }
 
 function pontuacao(){
