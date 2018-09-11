@@ -188,7 +188,7 @@ function vidas() {
 
 function objA() {
 	posicaoY = parseInt($("#tecla_A").css("top"));
-	$("#tecla_A").css("top",posicaoY+2);
+	$("#tecla_A").css("top",posicaoY+1);
 
 	if (posicaoY >= 690) {
 		respawn = parseInt(Math.random()*515);
@@ -204,7 +204,7 @@ function objA() {
 
 function objB() {
 	posicaoY = parseInt($("#tecla_B").css("top"));
-	$("#tecla_B").css("top",posicaoY+2);
+	$("#tecla_B").css("top",posicaoY+1);
 
 	if (posicaoY >= 690) {
 		respawn = parseInt(Math.random()*515);
@@ -221,7 +221,7 @@ function objB() {
 }
 function objC() {
 	posicaoY = parseInt($("#tecla_C").css("top"));
-	$("#tecla_C").css("top",posicaoY+2);
+	$("#tecla_C").css("top",posicaoY+1);
 
 	if (posicaoY >= 690) {
 		respawn = parseInt(Math.random()*515);
@@ -236,7 +236,7 @@ function objC() {
 }
 function objD() {
 	posicaoY = parseInt($("#tecla_D").css("top"));
-	$("#tecla_D").css("top",posicaoY+2);
+	$("#tecla_D").css("top",posicaoY+1);
 
 	if (posicaoY >= 690) {
 		respawn = parseInt(Math.random()*515);
@@ -251,7 +251,7 @@ function objD() {
 }
 function objE() {
 	posicaoY = parseInt($("#tecla_E").css("top"));
-	$("#tecla_E").css("top",posicaoY+2);
+	$("#tecla_E").css("top",posicaoY+1);
 
 	if (posicaoY >= 690) {
 		respawn = parseInt(Math.random()*515);

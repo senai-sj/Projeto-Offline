@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>SlideQuest - Jogo</title>
 	<link href="../public/css/jogo.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="../public/js/Jquery.js"></script>
-	<script type="text/javascript" src="../public/js/funcoes.js"></script>
+	<script src="../public/js/Jquery.js"></script>
+	<script src="../public/js/funcoes.js"></script>
 </head>
 <body class="fundo">
 <div id="subheader">
@@ -37,12 +38,12 @@
 <div id="placar" onload="pontos()"></div>
 <div id="saude" onload="vidas()"></div>
 <div id="buttonrow">
-<a href="menu.html"><button name="btnSair" id="default_button">Sair</button></a>
-<a href="jogo.html"><button name="btnReiniciar" id="default_button">Reiniciar</button></a>
+<a href="menu.html" id="default_button">Sair</a>
+<a href="jogo.html" id="default_button">Reiniciar</a>
 <button name="btnProximaFase" id="default_button">Proxima Fase</button>
 </div>
 <footer>
-	Version 0.2 &copy Copyright SENAI - All Rights Reserved
+	Version 0.2 &copy; Copyright SENAI - All Rights Reserved
 </footer>
 </body>
 </html>
