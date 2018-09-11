@@ -27,7 +27,8 @@ function start() {
 	// var musica = document.getElementById('musica');
 	// musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	// musica.play();
-  
+
+var timer = 5000;
 var pontos = 0;
 var vida=10;
 var jogo = {};
@@ -55,6 +56,7 @@ $(function() {
 
 function loop() {
 	pontuacao();
+	tempo();
 	vidas();
 	objA();
 	objB();
@@ -83,10 +85,10 @@ function cliqueTecla() {
     if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550 && posY <= 639) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
-    if (posY >= 640) {
+    if (posY >= 600) {
    	pontos+=20;
     }
 }
@@ -105,10 +107,10 @@ function cliqueTeclaB() {
     if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550 && posY <= 639) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
-    if (posY >= 640) {
+    if (posY >= 600) {
    	pontos+=20;
     }
 }
@@ -127,10 +129,10 @@ function cliqueTeclaC() {
     if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550 && posY <= 639) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
-    if (posY >= 640) {
+    if (posY >= 600) {
    	pontos+=20;
     }
 }
@@ -149,10 +151,10 @@ function cliqueTeclaD() {
     if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550 && posY <= 639) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
-    if (posY >= 640) {
+    if (posY >= 600) {
    	pontos+=20;
     }
 }
@@ -171,10 +173,10 @@ function cliqueTeclaE() {
     if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550 && posY <= 639) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
-    if (posY >= 640) {
+    if (posY >= 600) {
    	pontos+=20;
     }
 }
@@ -190,7 +192,7 @@ function objA() {
 	posicaoY = parseInt($("#tecla_A").css("top"));
 	$("#tecla_A").css("top",posicaoY+1);
 
-	if (posicaoY >= 690) {
+	if (posicaoY >= 640) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_A").css("left",respawn);
 		$("#tecla_A").css("top", 0);
@@ -206,7 +208,7 @@ function objB() {
 	posicaoY = parseInt($("#tecla_B").css("top"));
 	$("#tecla_B").css("top",posicaoY+1);
 
-	if (posicaoY >= 690) {
+	if (posicaoY >= 640) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_B").css("left",respawn);
 		$("#tecla_B").css("top", 0);
@@ -223,7 +225,7 @@ function objC() {
 	posicaoY = parseInt($("#tecla_C").css("top"));
 	$("#tecla_C").css("top",posicaoY+1);
 
-	if (posicaoY >= 690) {
+	if (posicaoY >= 640) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_C").css("left",respawn);
 		$("#tecla_C").css("top", 0);
@@ -238,7 +240,7 @@ function objD() {
 	posicaoY = parseInt($("#tecla_D").css("top"));
 	$("#tecla_D").css("top",posicaoY+1);
 
-	if (posicaoY >= 690) {
+	if (posicaoY >= 640) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_D").css("left",respawn);
 		$("#tecla_D").css("top", 0);
@@ -253,7 +255,7 @@ function objE() {
 	posicaoY = parseInt($("#tecla_E").css("top"));
 	$("#tecla_E").css("top",posicaoY+1);
 
-	if (posicaoY >= 690) {
+	if (posicaoY >= 640) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_E").css("left",respawn);
 		$("#tecla_E").css("top", 0);
@@ -268,6 +270,14 @@ function objE() {
 function pontuacao(){
 
 	$("#placar").html("<p>Pontuação: "+ pontos +"</p>");
+
+}
+function tempo() {
+	timer--;
+	$("#tempo").html("<p>"+timer+"</p>");
+	if (timer == 0) {
+		fim();
+	}
 
 }
 
