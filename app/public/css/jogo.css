@@ -65,9 +65,8 @@ html, body {
 	position: relative;
 	margin-left: auto;
 	margin-right:auto;
-	width: 620px;
-	height: 540px;
-	top: -35px;
+	width: 520px;
+	height: 720px;
 }
 
 footer {
@@ -94,7 +93,7 @@ footer {
 	width: 400px;
 	height: 350px;
 	top: 75px;
-	left: 120px;
+	left: 70px;
 }
 .fim {
 	padding: 1em;
@@ -108,7 +107,7 @@ footer {
 	width: 400px;
 	height: 200px;
 	top: 75px;
-	left: 120px;
+	left: 70px;
 	cursor: pointer;
 }
 
@@ -118,11 +117,52 @@ footer {
 	position: absolute;
 	width: 100%;
 	height: 5px;
-	top: 525px;
+	top: 700px;
+	left: 0px;
+}
+#linha5 {
+	background-color: #0f991f40;
+	color: white;
+	font-size: 8px;
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: 300px;
+	left: 0px;
+}
+#linha10 {
+	background-color: #0f991f40;
+	color: white;
+	font-size: 8px;
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: 400px;
+	left: 0px;
+}
+#linha15 {
+	background-color: #0f991f40;
+	color: white;
+	font-size: 8px;
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: 550px;
+	left: 0px;
+}
+#linha20 {
+	background-color: #0f991f40;
+	color: white;
+	font-size: 8px;
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: 640px;
 	left: 0px;
 }
 #tecla_A {
-	background-color: white;
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFF 100%);
+	cursor: pointer;
 	position: absolute;
 	width: 45px;
 	height: 60px;
@@ -130,19 +170,46 @@ footer {
 	left: 35px;
 }
 #tecla_B {
-	background-color: white;
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFF 100%);
+	cursor: pointer;
 	position: absolute;
 	width: 45px;
 	height: 60px;
 	top: 0px;
 	left: 95px;
 }
+#tecla_C {
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFF 100%);
+	cursor: pointer;
+	position: absolute;
+	width: 45px;
+	height: 60px;
+	top: 0px;
+	left: 135px;
+}
+#tecla_D {
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFF 100%);
+	cursor: pointer;
+	position: absolute;
+	width: 45px;
+	height: 60px;
+	top: 0px;
+	left: 180px;
+}
+#tecla_E {
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFF 100%);
+	cursor: pointer;
+	position: absolute;
+	width: 45px;
+	height: 60px;
+	top: 0px;
+	left: 225px;
+}
 
 /* Estrutura*/
 #titulo {
 	padding: 1em;
 	margin-top: -10px;
-	position: center;
 	color: white;
 	background-color: #091426;
 	width: 692px;
@@ -158,8 +225,8 @@ footer {
 	position: relative;
 	color: white;
 	text-shadow:0px 0px 8px #FF0;
-	background-color: #C93268AA;
-	width: 616px;
+	background-color: #03005eAA;
+	width: 515px;
 	height: 20px;
 	font-family: verdana;
 	font-size: 18px;
@@ -187,6 +254,6 @@ footer {
 #saude p {
 	position: absolute;
 	top: -56px;
-	left: 600px;
+	left: 535px;
 }
 /* fim do Código Copiado*/
