@@ -4,6 +4,10 @@ $(document).ready(function() {
 	
 	$(".fim").hide();
 	$("#laser").hide();
+	$("#linha5").hide();
+	$("#linha10").hide();
+	$("#linha15").hide();
+	$("#linha20").hide();
 	$("#tecla_A").hide();
 	$("#tecla_B").hide();
 	$("#tecla_C").hide();
@@ -15,6 +19,10 @@ $(document).ready(function() {
 function start() {
 	$(".inicio").hide();
 	$("#laser").show();
+	$("#linha5").show();
+	$("#linha10").show();
+	$("#linha15").show();
+	$("#linha20").show();
 	$("#tecla_A").show();
 	$("#tecla_B").show();
 	$("#tecla_C").show();
@@ -28,7 +36,7 @@ function start() {
 	// musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	// musica.play();
 
-var timer = 5000;
+var timer = 6000;
 var pontos = 0;
 var vida=10;
 var jogo = {};
@@ -189,10 +197,10 @@ function vidas() {
 }
 
 function objA() {
-	posicaoY = parseInt($("#tecla_A").css("top"));
-	$("#tecla_A").css("top",posicaoY+1);
+	posicaoY = parseFloat($("#tecla_A").css("top"));
+	$("#tecla_A").css("top",posicaoY+1.2);
 
-	if (posicaoY >= 640) {
+	if (posicaoY >= 680) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_A").css("left",respawn);
 		$("#tecla_A").css("top", 0);
@@ -205,10 +213,10 @@ function objA() {
 }
 
 function objB() {
-	posicaoY = parseInt($("#tecla_B").css("top"));
-	$("#tecla_B").css("top",posicaoY+1);
+	posicaoY = parseFloat($("#tecla_B").css("top"));
+	$("#tecla_B").css("top",posicaoY+0.8);
 
-	if (posicaoY >= 640) {
+	if (posicaoY >= 680) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_B").css("left",respawn);
 		$("#tecla_B").css("top", 0);
@@ -222,10 +230,10 @@ function objB() {
 	}
 }
 function objC() {
-	posicaoY = parseInt($("#tecla_C").css("top"));
-	$("#tecla_C").css("top",posicaoY+1);
+	posicaoY = parseFloat($("#tecla_C").css("top"));
+	$("#tecla_C").css("top",posicaoY+1.2);
 
-	if (posicaoY >= 640) {
+	if (posicaoY >= 680) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_C").css("left",respawn);
 		$("#tecla_C").css("top", 0);
@@ -237,10 +245,10 @@ function objC() {
 	}
 }
 function objD() {
-	posicaoY = parseInt($("#tecla_D").css("top"));
-	$("#tecla_D").css("top",posicaoY+1);
+	posicaoY = parseFloat($("#tecla_D").css("top"));
+	$("#tecla_D").css("top",posicaoY+0.7);
 
-	if (posicaoY >= 640) {
+	if (posicaoY >= 680) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_D").css("left",respawn);
 		$("#tecla_D").css("top", 0);
@@ -252,10 +260,10 @@ function objD() {
 	}
 }
 function objE() {
-	posicaoY = parseInt($("#tecla_E").css("top"));
-	$("#tecla_E").css("top",posicaoY+1);
+	posicaoY = parseFloat($("#tecla_E").css("top"));
+	$("#tecla_E").css("top",posicaoY+0.8);
 
-	if (posicaoY >= 640) {
+	if (posicaoY >= 680) {
 		respawn = parseInt(Math.random()*515);
 		$("#tecla_E").css("left",respawn);
 		$("#tecla_E").css("top", 0);
