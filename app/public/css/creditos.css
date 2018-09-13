@@ -1,3 +1,11 @@
+@font-face {
+	font-family: NOZSTUDIO;
+	src:url(../fonts/NOZSTUDIO.TTF);
+}
+@font-face {
+	font-family: Digital;
+	src:url(../fonts/Digital.TTF);
+}
 .alinhamento {
 	padding: 1em;
 	font-family: verdana;
@@ -8,18 +16,18 @@
 
 #header {
 	font-family: BankGothic Md BT, fantasy;
-	font-size: 60px;
+	font-size: 40px;
 	text-align: center;
-	text-shadow:0px 0px 8px #FF0;
-	color: #FFF;
+	text-shadow:1px 1px 3px #cc9c02;
+	color: #FFFFFF55;
 }
 
 #subheader {
 	font-family: BankGothic Md BT, fantasy;
-	font-size: 50px;
+	font-size: 30px;
 	text-align: center;
-	text-shadow:0px 0px 8px #FF0;
-	color: #FFF;
+	text-shadow:1px 1px 3px #a5a4a0;
+	color: #FFFFFF55;
 }
 
 .creditos {
@@ -32,6 +40,65 @@
 	border: 1px solid #000;
 	background:linear-gradient(to bottom, #0063d0 10%, #003e83 100%);
 	color: #FFF;
+}
+
+.creditos a{
+	width: 310px;
+	display:inline-block;
+	text-align: center;
+	font-size: 16px;
+	font-family: gill sans MT;
+	text-align: center;
+	color: #FFF;
+}
+#NOZ_sample {
+	font-family: NOZSTUDIO;
+}
+#dig_sample {
+	font-family: Digital;
+	text-shadow: 0px 2px 15px #000;
+}
+.license {
+	width: 500px;
+	min-height: 150px;
+	max-height: 1800px;
+	display:inline-block;
+	text-align: center;
+	font-size: 14px;
+	font-family: BankGothic Md BT;
+	text-align: center;
+	border: 1px solid #FFFFFF55;
+	background-color: #000000BB;
+	color: #FFF;
+}
+.license a{
+	text-align: center;
+	font-size: 16px;
+	font-family: BankGothic Md BT;
+	text-align: center;
+	color: #EEE;
+}
+.termos {
+	width: 500px;
+	min-height: 150px;
+	max-height: 1800px;
+	display:inline-block;
+	text-align: center;
+	font-size: 16px;
+	font-family: Old English Text MT;
+	text-align: center;
+	border: 2px solid #000482;
+	background-image: url(../img/fundo_papel.jpg);
+	background-size:520px;
+	background-repeat: no-repeat;
+	color: #000;
+}
+.termos a{
+	text-align: center;
+	font-size: 16px;
+	font-family: BankGothic Md BT;
+	text-align: center;
+	color: #EEE;
 }
 
 #default_button {
