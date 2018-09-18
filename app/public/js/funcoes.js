@@ -17,6 +17,7 @@ $(document).ready(function() {
 });
 
 function start() {
+	$(".fim").hide();
 	$(".inicio").hide();
 	$("#laser").show();
 	$("#linha5").show();
@@ -29,13 +30,42 @@ function start() {
 	$("#tecla_D").show();
 	$("#tecla_E").show();
 
+	var musica = document.getElementById('musica');
+	musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
+	musica.play();
+
+	// Posicionamnto 
+	posY = parseInt($("#tecla_A").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#tecla_A").css("left",respawn);
+	$("#tecla_A").css("top", 0);
+
+	posY = parseInt($("#tecla_B").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#tecla_B").css("left",respawn);
+	$("#tecla_B").css("top", 0);
+
+	posY = parseInt($("#tecla_C").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#tecla_C").css("left",respawn);
+	$("#tecla_C").css("top", 0);
+
+	posY = parseInt($("#tecla_D").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#tecla_D").css("left",respawn);
+	$("#tecla_D").css("top", 0);
+
+	posY = parseInt($("#tecla_E").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#tecla_E").css("left",respawn);
+	$("#tecla_E").css("top", 0);
+
 	// var somTiro = document.getElementById('somTiro');
 	// var gameover = document.getElementById('gameover');
 	
 	// var musica = document.getElementById('musica');
 	// musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	// musica.play();
-
 var timer = 6000;
 var pontos = 0;
 var vida=10;
@@ -87,13 +117,13 @@ function cliqueTecla() {
 	if (posY <= 299) {
    	pontos+=1;
     }
-	if (posY >= 300) {
+	if (posY >= 300 && posY <= 399) {
    	pontos+=5;
     }
-    if (posY >= 400) {
+    if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
     if (posY >= 600) {
@@ -106,16 +136,16 @@ function cliqueTeclaB() {
     respawn = parseInt(Math.random()*515);
 		$("#tecla_B").css("left",respawn);
 		$("#tecla_B").css("top", 0);
- 	if (posY <= 299) {
+	if (posY <= 299) {
    	pontos+=1;
     }
-	if (posY >= 300) {
+	if (posY >= 300 && posY <= 399) {
    	pontos+=5;
     }
-    if (posY >= 400) {
+    if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
     if (posY >= 600) {
@@ -128,16 +158,16 @@ function cliqueTeclaC() {
     respawn = parseInt(Math.random()*515);
 		$("#tecla_C").css("left",respawn);
 		$("#tecla_C").css("top", 0);
- 	if (posY <= 299) {
+	if (posY <= 299) {
    	pontos+=1;
     }
-	if (posY >= 300) {
+	if (posY >= 300 && posY <= 399) {
    	pontos+=5;
     }
-    if (posY >= 400) {
+    if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
     if (posY >= 600) {
@@ -150,16 +180,16 @@ function cliqueTeclaD() {
     respawn = parseInt(Math.random()*515);
 		$("#tecla_D").css("left",respawn);
 		$("#tecla_D").css("top", 0);
- 	if (posY <= 299) {
+	if (posY <= 299) {
    	pontos+=1;
     }
-	if (posY >= 300) {
+	if (posY >= 300 && posY <= 399) {
    	pontos+=5;
     }
-    if (posY >= 400) {
+    if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
     if (posY >= 600) {
@@ -172,16 +202,16 @@ function cliqueTeclaE() {
     respawn = parseInt(Math.random()*515);
 		$("#tecla_E").css("left",respawn);
 		$("#tecla_E").css("top", 0);
- 	if (posY <= 299) {
+	if (posY <= 299) {
    	pontos+=1;
     }
-	if (posY >= 300) {
+	if (posY >= 300 && posY <= 399) {
    	pontos+=5;
     }
-    if (posY >= 400) {
+    if (posY >= 400 && posY <= 549) {
    	pontos+=10;
     }
-    if (posY >= 550) {
+    if (posY >= 550 && posY <= 599) {
    	pontos+=15;
     }
     if (posY >= 600) {
@@ -280,6 +310,7 @@ function pontuacao(){
 	$("#placar").html("<p>Pontos: "+ pontos +"</p>");
 
 }
+
 function tempo() {
 	timer--;
 	$("#tempo").html("<p>["+timer+"]</p>");
@@ -298,42 +329,12 @@ function fim() {
 	$("#tecla_C").hide();
 	$("#tecla_D").hide();
 	$("#tecla_E").hide();
+	
 	$(".fim").show();
-	// musica.pause();
+	musica.pause();
 	// gameover.play();
 
 	$(".fim").html("<h1>Fim de Jogo</h1> <h1>Pontuação Final:"+pontos+"</h1><p>Clique aqui para jogar novamente</p>");
 	}
 }
 
-function reiniciar(){
-	posY = parseInt($("#tecla_A").css("top"));
-   	respawn = parseInt(Math.random()*515);
-	$("#tecla_A").css("left",respawn);
-	$("#tecla_A").css("top", 0);
-
-	posY = parseInt($("#tecla_B").css("top"));
-   	respawn = parseInt(Math.random()*515);
-	$("#tecla_B").css("left",respawn);
-	$("#tecla_B").css("top", 0);
-
-	posY = parseInt($("#tecla_C").css("top"));
-   	respawn = parseInt(Math.random()*515);
-	$("#tecla_C").css("left",respawn);
-	$("#tecla_C").css("top", 0);
-
-	posY = parseInt($("#tecla_D").css("top"));
-   	respawn = parseInt(Math.random()*515);
-	$("#tecla_D").css("left",respawn);
-	$("#tecla_D").css("top", 0);
-
-	posY = parseInt($("#tecla_E").css("top"));
-   	respawn = parseInt(Math.random()*515);
-	$("#tecla_E").css("left",respawn);
-	$("#tecla_E").css("top", 0);
-
-	$(".fim").hide();
-	// gameover.pause();
-	
-	start();
-}

@@ -13,13 +13,14 @@
 <h1>Jogo <i>Chuva de Verão</i></h1>
 </div>
 <div class="bg">
-	<div class="inicio" onclick="reiniciar();">
+	<div class="inicio" onclick="start();">
 		<h1>Instruções</h1><br>
 		<p>Clique nas estrelas que estão caindo para eliminá-las.</p>
 		<p>Quanto mais próximo da linha vermelha, maior os pontos</p>
 		<p>Não deixa as teclas passarem da zona de risco!</p>
 		<p>Cada tecla que escapar desconta uma vida.</p>
 		<p>Boa Sorte!</p><br>
+		<b>♫ Fones de ouvido Recomendados ♫</b>
 		<h3>Clique aqui para iniciar</h3>
 	</div>
 	<div id="laser"></div>
@@ -32,15 +33,18 @@
 	<div id="tecla_C"><br></div>
 	<div id="tecla_D"><br></div>
 	<div id="tecla_E"><br></div>
-	<div class="fim" onclick="reiniciar();"></div>
+	<div class="fim" onclick="start();"></div>
 </div>
 <div id="placar" onload="pontos()"></div>
 <div id="tempo" onload="cronos()"></div>
 <div id="saude" onload="vidas()"></div>
+
+<audio src="../public/sons/peaceOfMind.mp3" preload="auto" id="musica"></audio>
+
 <div id="buttonrow">
-<a href="menu.html" id="default_button">Sair</a>
-<a href="jogo.html" id="default_button">Reiniciar</a>
-<button name="btnProximaFase" id="default_button">Proxima Fase</button>
+	<a href="menu.html" id="default_button">Sair</a>
+	<a href="jogo.html" id="default_button">Reiniciar</a>
+	<a href="fases.html" id="default_button">Selecionar Fase</a>
 </div>
 <footer>
 	Version 0.3 &copy; Copyright SENAI - All Rights Reserved
