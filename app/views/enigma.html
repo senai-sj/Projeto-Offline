@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>SlideQuest - Jogo</title>
+	<link rel="icon" href="../favicon-16x16.png">
+	<link href="../public/css/jogo.css" type="text/css" rel="stylesheet">
+	<script src="../public/js/Jquery.js"></script>
+	<script src="../public/js/quiz.js"></script>
+</head>
+<body class="fundo">
+<div id="subheader">
+<h1>Jogo <i>Quiz</i></h1>
+</div>
+<div class="bg">
+	<div class="inicio" onclick="start();">
+	</div>
+	<div class="fim" onclick="start();"></div>
+</div>
+<div id="placar" onload="pontos()"></div>
+<div id="tempo" onload="cronos()"></div>
+<div id="saude" onload="vidas()"></div>
+
+<audio src="../public/sons/Motherlode.mp3" preload="auto" id="musica"></audio>
+
+<div id="buttonrow">
+	<a href="menu.html" id="default_button">Sair</a>
+	<a href="jogo.html" id="default_button">Reiniciar</a>
+	<a href="fases.html" id="default_button">Selecionar Fase</a>
+</div>
+<footer>
+	Version 0.3 &copy; Copyright SENAI - All Rights Reserved
+</footer>
+</body>
+</html>
