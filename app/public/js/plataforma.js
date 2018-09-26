@@ -10,15 +10,12 @@ $(document).ready(function() {
 function start() {
 	$(".inicio").hide();
 	$("#player").show();
-
-	var somTiro = document.getElementById('somTiro');
-	var gameover = document.getElementById('gameover');
 	
 	var musica = document.getElementById('musica');
 	musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	musica.play();
   
-var vida = 10;
+var vida = 3;
 var pontos = 0;
 var recorde = 0;
 var limpaTiro = true;
