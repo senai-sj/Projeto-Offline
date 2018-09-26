@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>SlideQuest - Jogo dos Alimentos [WIP]</title>
+	<link rel="icon" href="../favicon-16x16.png">
+	<link href="../public/css/estilo.css" type="text/css" rel="stylesheet">
+	<script src="../public/js/Jquery.js"></script>
+	<script src="../public/js/plataforma.js"></script>
+</head>
+<body class="fundo">
+<div id="subheader">Jogo dos <i>Alimentos</i></div>
+<div class="bg">
+	<div class="inicio" onclick="start();">
+		<h1>Instruções</h1><br>
+		<p>Mova o personagem com as teclas ou W, A, S, D</p><br>
+		<p>Colete as frutas e verduras e evite a comida processada</p><br>
+		<p>Sobreviva até o tempo acabar para ir para a próxima fase</p>
+		<p>Boa Sorte!</p><br>
+		<b>♫ Fones de ouvido Recomendados ♫</b>
+		<h3>Clique aqui para iniciar</h3>
+	</div>
+	<div id="maca"><br></div>
+	<div id="melao"><br></div>
+	<div id="donut"><br></div>
+	<div id="laranja"><br></div>
+	<div id="refri"><br></div>
+	<div class="fim" onclick="start();"></div>
+</div>
+<div id="placar" onload="pontos()"></div>
+<div id="tempo" onload="cronos()"></div>
+<div id="saude" onload="vidas()"></div>
+
+<audio src="../public/sons/Motherlode.mp3" preload="auto" id="musica"></audio>
+
+<div id="buttonrow">
+	<a href="menu.html" id="default_button">Sair</a>
+	<a href="alimentos.html" id="default_button">Reiniciar</a>
+	<a href="fases.html" id="default_button">Selecionar Fase</a>
+</div>
+<footer>
+	Version 0.3 &copy; Copyright SENAI - All Rights Reserved
+</footer>
+</body>
+</html>

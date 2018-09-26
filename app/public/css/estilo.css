@@ -1,0 +1,251 @@
+@font-face {
+	font-family: Digital;
+	src:url(../fonts/Digital.TTF);
+}
+@font-face {
+	font-family: NOZSTUDIO;
+	src:url(../fonts/NOZSTUDIO.TTF);
+}
+
+#header {
+	font-family: BankGothic Md BT, fantasy;
+	font-size: 40px;
+	text-align: center;
+	text-shadow:0px 0px 8px #FF0;
+	color: #FFF;
+}
+
+#subheader {
+	padding: 5px;
+	font-family: BankGothic Md BT, fantasy;
+	font-size: 45px;
+	text-align: center;
+	text-shadow: 2px 2px 8px #00C9E9;
+	color: #fff;
+}
+
+html, body {
+	margin: 0;
+	height: 40%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#default_button {
+	padding: 1em;
+	min-width: 180px;
+	max-width: 300px;
+	border: 0px solid #000;
+	border-radius: 0px;
+	display:inline-block;
+	cursor:pointer;
+	-webkit-transition: .5s;
+	transition: .5s;
+	font-family: Humnst777 BT, calibri, arial;
+	font-size: 18px;
+	padding:6px 10px;
+	text-decoration:none;
+	box-shadow: 0px 3px 8px #000;
+	background:linear-gradient(to bottom, #003e83 10%, #0063d0 100%);
+	color: #FFF;
+}
+
+#default_button:hover {
+	background:linear-gradient(to bottom, #0157b7 10%, #0078fc 100%);
+	-webkit-transition: .5s;
+	transition: .5s;
+	color: #000;
+}
+#buttonrow {
+	padding: 1em;
+	position: relative;
+	top: -60px;
+}
+.fundo {
+	background-color: #0a131a;
+	font-family: verdana;
+	font-size: 16px;
+	text-align: center;
+}
+.bg {
+	padding: 1em;
+	background-image: url(../img/noite.jpg);
+	background-size: 1550px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+	margin-left: auto;
+	margin-right:auto;
+	width: 520px;
+	height: 720px;
+}
+
+footer {
+	font-family: verdana;
+	font-size: 14px;
+	color: #FFF;
+	text-align: right;
+	text-shadow:0px 0px 8px #FF0;
+	padding-bottom: 3em;
+	padding-top: 4em;
+	padding-right: 3em;
+}
+
+/* Código Copiado */
+.inicio {
+	padding: 1em;
+	background-color: #000000AA;
+	color: #F90;
+	cursor: pointer;
+	font-family: NOZSTUDIO;
+	font-size: 11px;
+	text-align: center;
+	position: absolute;
+	margin-left: auto;
+	margin-right:auto;
+	width: 400px;
+	height: 350px;
+	top: 75px;
+	left: 65px;
+}
+.fim {
+	padding: 1em;
+	background-color: #DD0000AA;
+	font-family: NOZSTUDIO;
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	margin-left: auto;
+	margin-right:auto;
+	width: 400px;
+	height: 200px;
+	top: 75px;
+	left: 65px;
+	cursor: pointer;
+}
+
+#maca {
+	background:linear-gradient(to bottom, #EA878a 10%, #CD131c 100%);
+	cursor: pointer;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
+	top: 0px;
+	left: 10px;
+}
+#melao {
+	background:linear-gradient(to bottom, #C2C800 10%, #86AB00 100%);
+	cursor: pointer;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
+	top: 0px;
+	left: 35px;
+}
+#donut {
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFFFFF11 100%);
+	cursor: pointer;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	box-shadow: 0px 0px 1px 2px #DC0000;
+	border: 10px solid #772b00;
+	border-radius: 40px;
+	top: 0px;
+	left: 70px;
+}
+#laranja {
+	background:linear-gradient(to bottom, #ffbd82 10%, #ff8a1e 100%);
+	cursor: pointer;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
+	top: 0px;
+	left: 105px;
+}
+#refri {
+	background-image: url("../img/Refri.png");background-repeat: no-repeat;
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 29px;
+	box-shadow: 0px 0px 1px 2px #DC0000;
+	top: 0px;
+	left: 130px;
+}
+
+/* Estrutura*/
+#titulo {
+	padding: 1em;
+	margin-top: -10px;
+	color: white;
+	background-color: #091426;
+	width: 692px;
+	height: 25px;
+	font-family: verdana;
+	font-size: 20px;
+	text-align: center;
+	margin-left: auto;
+	margin-right:auto;
+}
+#placar {
+	padding: 1em;
+	position: relative;
+	color: #E2DB00;
+	text-shadow:0px 0px 8px #000;
+	background-color: #000000DD;
+	width: 515px;
+	height: 5px;
+	font-family: Digital;
+	font-size: 18px;
+	text-align: left;
+	margin-left: auto;
+	margin-right:auto;
+}
+#placar p {
+	position: absolute;
+	top: -12px;
+}
+#saude {
+	padding: 1em;
+	position: relative;
+	color: #C91836;
+	text-shadow:0px 0px 8px #000;
+	width: 716px;
+	height: 0px;
+	font-family: Digital;
+	font-size: 18px;
+	text-align: right;
+	margin-left: auto;
+	margin-right:auto;
+}
+#saude p {
+	position: absolute;
+	top: -90px;
+	left: 550px;
+}
+#tempo {
+	padding: 1em;
+	position: relative;
+	color: #00C900;
+	text-shadow:0px 0px 8px #000;
+	width: 716px;
+	height: 0px;
+	font-family: Digital;
+	font-size: 18px;
+	text-align: right;
+	margin-left: auto;
+	margin-right:auto;
+}
+#tempo p {
+	position: absolute;
+	top: -54px;
+	left: 350px;
+}
+/* fim do Código Copiado*/
