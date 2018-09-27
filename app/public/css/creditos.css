@@ -35,7 +35,7 @@
 	display:inline-block;
 	text-align: center;
 	font-size: 16px;
-	font-family: gill sans MT;
+	font-family:  Bahnschrift Light Condensed, calibri, cursive;
 	text-align: center;
 	border: 1px solid #000;
 	background:linear-gradient(to bottom, #0063d0 10%, #003e83 100%);
@@ -47,7 +47,7 @@
 	display:inline-block;
 	text-align: center;
 	font-size: 16px;
-	font-family: gill sans MT;
+	font-family: Bahnschrift;
 	text-align: center;
 	color: #FFF;
 }
@@ -111,7 +111,7 @@
 	cursor:pointer;
 	-webkit-transition: .5s;
 	transition: .5s;
-	font-family: Humnst777 BT, calibri, arial;
+	font-family: Bahnschrift Light Condensed, calibri, arial;
 	font-size: 18px;
 	padding:6px 10px;
 	text-decoration:none;
