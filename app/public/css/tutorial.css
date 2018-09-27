@@ -1,0 +1,168 @@
+html, body {
+	height: 60%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+/* Divs e Containers*/
+#header {
+	font-family: BankGothic Md BT, fantasy;
+	font-size: 60px;
+	text-align: center;
+	text-shadow:0px 0px 8px #FF0;
+	color: #FFF;
+}
+
+#subheader {
+	font-family: BankGothic Md BT, fantasy;
+	font-size: 50px;
+	text-align: center;
+	text-shadow:0px 0px 8px #FF0;
+	color: #FFF;
+}
+
+#form {
+	padding: 1em;
+	width: 500px;
+	height: 150px;
+	position: relative;
+	background-color: #000000AA;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: verdana;
+	font-size: 15px;
+	text-align: center;
+	color: #FFF;
+}
+#form ul {list-style: none;}
+
+#form li {margin-bottom: 6px;}
+
+footer {
+	font-family: verdana;
+	font-size: 14px;
+	color: #FFF;
+	text-align: right;
+	text-shadow:0px 0px 8px #FF0;
+	padding-bottom: 3em;
+	padding-top: 2em;
+	padding-right: 3em;
+}
+
+.alinhamento {
+	padding: 1em;
+	font-family: verdana;
+	font-size: 15px;
+	text-align: center;
+	color: #000;
+}
+/* Botões e caixas*/
+
+#default_button {
+	padding: 1em;
+	min-width: 180px;
+	max-width: 300px;
+	border: 0px solid #000;
+	border-radius: 0px;
+	display:inline-block;
+	cursor:pointer;
+	-webkit-transition: .5s;
+	transition: .5s;
+	font-family: Humnst777 BT, calibri, arial;
+	font-size: 18px;
+	padding:6px 10px;
+	text-decoration:none;
+	box-shadow: 0px 3px 8px #000;
+	background:linear-gradient(to bottom, #003e83 10%, #0063d0 100%);
+	color: #FFF;
+}
+
+#default_button:hover {
+	background:linear-gradient(to bottom, #0157b7 10%, #0078fc 100%);
+	-webkit-transition: .5s;
+	transition: .5s;
+	color: #000;
+}
+
+/* Planos de Fundo*/
+.fundo {
+	background-color: #0a131a;
+	font-family: verdana;
+	font-size: 16px;
+	text-align: center;
+}
+
+#lista{
+	padding: 1em;
+	padding-left: 2em;
+	width: 800px;
+	height: 450px;
+	position: relative;
+	background-color: #000000AA;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: verdana;
+	font-size: 16px;
+	text-align: left;
+	color: #FFF;
+}
+#lista h1 {
+	text-align: center;
+}
+#ng1 {position: absolute;top: 85px;left: 550px;font-weight: normal;}
+#ng2 {position: absolute;top: 125px;left: 550px;font-weight: normal;}
+
+#buttonrow {
+	padding: 1em;
+	position: relative;
+}
+
+/* Itens */
+#maca {
+	background:linear-gradient(to bottom, #EA878a 10%, #CD131c 100%);
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
+	left: 8px;
+}
+#melao {
+	background:linear-gradient(to bottom, #C2C800 10%, #86AB00 100%);
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
+	left: 8px;
+}
+#donut {
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFFFFF11 100%);
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	box-shadow: 0px 0px 1px 2px #DC0000;
+	border: 10px solid #772b00;
+	border-radius: 40px;
+	top: 95px;
+	left: 510px;
+}
+#laranja {
+	background:linear-gradient(to bottom, #ffbd82 10%, #ff8a1e 100%);
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
+	left: 8px;
+}
+#refri {
+	background-image: url("../img/Refri.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 20px;
+	height: 29px;
+	box-shadow: 0px 0px 1px 2px #DC0000;
+	top: 135px;
+	left: 515px;
+}
