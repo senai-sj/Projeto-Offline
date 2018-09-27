@@ -19,6 +19,7 @@
 	padding: 5px;
 	font-family: BankGothic Md BT, fantasy;
 	font-size: 45px;
+	font-style: italic;
 	text-align: center;
 	text-shadow: 2px 2px 8px #00C9E9;
 	color: #fff;
@@ -72,7 +73,6 @@ html, body {
 	background-image: url(../img/Palmeiras.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	position: relative;
 	margin-left: auto;
 	margin-right:auto;
@@ -95,7 +95,8 @@ footer {
 .inicio {
 	padding: 1em;
 	background-color: #000000AA;
-	color: #F90;
+	color: #FFF;
+	text-shadow:1px 1px 8px #00C9E9;
 	cursor: pointer;
 	font-family: NOZSTUDIO;
 	font-size: 11px;
@@ -110,7 +111,10 @@ footer {
 }
 .fim {
 	padding: 1em;
-	background-color: #DD0000AA;
+	background-color: #000000AA;
+	color: #FC0000;
+	text-shadow:1px 1px 8px #CC0000;
+	border: 1px solid #FFF;
 	font-family: NOZSTUDIO;
 	font-size: 12px;
 	text-align: center;
@@ -120,13 +124,38 @@ footer {
 	width: 400px;
 	height: 200px;
 	top: 75px;
-	left: 65px;
+	left: 165px;
 	cursor: pointer;
 }
-
+.pausa {
+	padding: 1em;
+	background-color: #000000AA;
+	color: #FFF;
+	text-shadow:1px 1px 8px #00C9E9;
+	border: 1px solid #FFF;
+	font-family: NOZSTUDIO;
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	margin-left: auto;
+	margin-right:auto;
+	width: 400px;
+	height: 200px;
+	top: 75px;
+	left: 165px;
+	cursor: pointer;
+}
+#player {
+	width:30px;
+	height:30px;
+	background-image: url("../img/cesta.png");background-repeat: no-repeat;
+	border-radius: 100px;
+	position: absolute;
+	top: 500px;
+	left: 350px;
+}
 #maca {
 	background:linear-gradient(to bottom, #EA878a 10%, #CD131c 100%);
-	cursor: pointer;
 	position: absolute;
 	width: 18px;
 	height: 18px;
@@ -137,7 +166,6 @@ footer {
 }
 #melao {
 	background:linear-gradient(to bottom, #C2C800 10%, #86AB00 100%);
-	cursor: pointer;
 	position: absolute;
 	width: 28px;
 	height: 28px;
@@ -148,7 +176,6 @@ footer {
 }
 #donut {
 	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFFFFF11 100%);
-	cursor: pointer;
 	position: absolute;
 	width: 10px;
 	height: 10px;
@@ -160,7 +187,6 @@ footer {
 }
 #laranja {
 	background:linear-gradient(to bottom, #ffbd82 10%, #ff8a1e 100%);
-	cursor: pointer;
 	position: absolute;
 	width: 18px;
 	height: 18px;
@@ -171,7 +197,6 @@ footer {
 }
 #refri {
 	background-image: url("../img/Refri.png");background-repeat: no-repeat;
-	cursor: pointer;
 	position: absolute;
 	width: 20px;
 	height: 29px;
@@ -181,19 +206,6 @@ footer {
 }
 
 /* Estrutura*/
-#titulo {
-	padding: 1em;
-	margin-top: -10px;
-	color: white;
-	background-color: #091426;
-	width: 692px;
-	height: 25px;
-	font-family: verdana;
-	font-size: 20px;
-	text-align: center;
-	margin-left: auto;
-	margin-right:auto;
-}
 #placar {
 	padding: 1em;
 	position: relative;

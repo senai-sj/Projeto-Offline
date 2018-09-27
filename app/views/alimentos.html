@@ -9,7 +9,7 @@
 	<script src="../public/js/plataforma.js"></script>
 </head>
 <body class="fundo">
-<div id="subheader">Jogo dos <i>Alimentos</i></div>
+<div id="subheader">Fase 1 / 10</div>
 <div class="bg">
 	<div class="inicio" onclick="start();">
 		<h1>Instruções</h1><br>
@@ -20,11 +20,16 @@
 		<b>♫ Fones de ouvido Recomendados ♫</b>
 		<h3>Clique aqui para iniciar</h3>
 	</div>
+	<div id="player"><br></div>
 	<div id="maca"><br></div>
 	<div id="melao"><br></div>
 	<div id="donut"><br></div>
 	<div id="laranja"><br></div>
 	<div id="refri"><br></div>
+<!-- 	<div class="pausa" onclick="resumir()">
+		<h1>Jogo Pausado</h1>
+		<p>Clique aqui para continuar</p>
+	</div> -->
 	<div class="fim" onclick="start();"></div>
 </div>
 <div id="placar" onload="pontos()"></div>
