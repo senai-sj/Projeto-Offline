@@ -80,6 +80,7 @@ footer {
 
 #default_button {
 	padding: 1em;
+	margin-top: 3px;
 	min-width: 180px;
 	max-width: 300px;
 	border: 0px solid #000;
