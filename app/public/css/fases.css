@@ -64,17 +64,17 @@ html, body {
 	cursor:pointer;
 	-webkit-transition: .5s;
 	transition: .5s;
-	font-family: Humnst777 BT, calibri, arial;
+	font-family: consolas, calibri, arial;
 	font-size: 18px;
 	padding:6px 10px;
 	text-decoration:none;
 	box-shadow: 0px 3px 8px #000;
-	background:linear-gradient(to bottom, #AAA 25%, #CCC 75%);
+	background:linear-gradient(to bottom, #003e8355 10%, #0063d055 100%);
 	color: #000;
 }
 
 #game_button:hover {
-	background:linear-gradient(to bottom, #67ba09 25%, #81e212 75%);
+	background:linear-gradient(to bottom, #003e83 10%, #0063d0 100%);
 	-webkit-transition: .5s;
 	transition: .5s;
 	color: #FFF;

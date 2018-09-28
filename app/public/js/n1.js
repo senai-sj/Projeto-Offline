@@ -1,10 +1,9 @@
 //alert("!");
-function pausa() {
-	alert("Jogo Pausado\nClique OK para resumir");
-}
+
 $(document).ready(function() {
 	
 	$(".fim").hide();
+	$(".vitoria").hide();
 	$(".pausa").hide();
 	$("#player").hide();
 	$("#maca").hide();
@@ -58,7 +57,8 @@ function start() {
 	musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	musica.play();
 
-var timer = 6000;
+var itens = 20;
+var vida = 3;
 var pontos = 0;
 var recorde = 0;
 var positionY = parseInt(Math.random()*720);
@@ -69,7 +69,6 @@ var TECLA = {
 	A:65,
 	S:83,
 	D:68,
-	P:80,
 
 	// Setas do Teclado
 	UP:38,
@@ -97,7 +96,8 @@ $(function() {
 // Loop principal
 function loop() {
 	pontuacao();
-	cronos();
+	vidas();
+	total();
 	movimento();
 	/* Objetos */
 	frutaA();
@@ -215,7 +215,11 @@ function colisao() {
 	   	respawn = parseInt(Math.random()*720);
 		$("#maca").css("left",respawn);
 		$("#maca").css("top", 0);
-            pontos+=250; 
+            pontos+=100;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
             if (pontos<0) {
                  pontos=0;
             }
@@ -230,7 +234,11 @@ function colisao() {
 	   	respawn = parseInt(Math.random()*720);
 		$("#melao").css("left",respawn);
 		$("#melao").css("top", 0);
-            pontos+=500; 
+            pontos+=300;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
             if (pontos<0) {
                  pontos=0;
             }
@@ -245,7 +253,11 @@ function colisao() {
 	   	respawn = parseInt(Math.random()*720);
 		$("#laranja").css("left",respawn);
 		$("#laranja").css("top", 0);
-            pontos+=250; 
+            pontos+=100;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
             if (pontos<0) {
                  pontos=0;
             }
@@ -259,11 +271,15 @@ function colisao() {
         posY = parseInt($("#donut").css("top"));
 	   	respawn = parseInt(Math.random()*720);
 		$("#donut").css("left",respawn);
-		$("#donut").css("top", 0); 
-            pontos+=100; 
-            if (pontos<0) {
-                 pontos=0;
+		$("#donut").css("top", 0);
+			itens-=1;
+			if (itens == 0) {
+				vitoria();
+			} 
+            if (vida == 0) {
+                fim();
             }
+            vida-=1;
         }
     }
     	if(playerY <= prod2Y){
@@ -274,11 +290,15 @@ function colisao() {
         posY = parseInt($("#refri").css("top"));
 	   	respawn = parseInt(Math.random()*720);
 		$("#refri").css("left",respawn);
-		$("#refri").css("top", 0); 
-              pontos+=150; 
-            if (pontos<0) {
-                 pontos=0;
+		$("#refri").css("top", 0);
+			itens-=1;
+			if (itens == 0) {
+				vitoria();
+			} 
+            if (vida == 0) {
+                fim();
             }
+            vida-=1;
         }
     }
 }
@@ -295,10 +315,9 @@ function pontuacao(){
 
 }
 
-function cronos() {
-	timer--;
-	$("#tempo").html("<p>["+timer+"]</p>");
-	if (timer == 0) {
+function total() {
+	$("#tempo").html("<p>Itens Restantes: "+itens+"</p>");
+	if (itens == 0) {
 		fim();
 	}
 }
@@ -312,5 +331,16 @@ function fim() {
 	// gameover.play();
 
 	$(".fim").html("<h1>Fim de Jogo</h1> <h1>Pontuação Final:"+pontos+"</h1><p>Clique aqui para jogar novamente</p>");
+	}
+function vitoria() {
+	window.clearInterval(jogo.timer);
+	jogo.timer=null;
+	$("#player").hide();
+	
+	$(".vitoria").show();
+	musica.pause();
+	// gameover.play();
+
+	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n2.html'>Clique para ir para o próximo nível</a>");
 	}
 }
