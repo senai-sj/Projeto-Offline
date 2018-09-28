@@ -8,19 +8,21 @@
 }
 
 #header {
-	font-family: BankGothic Md BT, fantasy;
+	font-family: BankGothic Md BT,AR Destine, fantasy;
 	font-size: 40px;
 	text-align: center;
-	text-shadow:0px 0px 8px #00B8C9;
+	text-shadow:0px 0px 8px #FF0;
 	color: #FFF;
 }
 
 #subheader {
-	font-family: BankGothic Md BT, fantasy;
-	font-size: 35px;
+	padding: 5px;
+	font-family: BankGothic Md BT,AR Destine, fantasy;
+	font-size: 45px;
+	font-style: italic;
 	text-align: center;
-	text-shadow:0px 0px 8px #00B8C9;
-	color: #FFF;
+	text-shadow: 2px 2px 8px #00C9E9;
+	color: #fff;
 }
 
 html, body {
@@ -68,15 +70,14 @@ html, body {
 }
 .bg {
 	padding: 1em;
-	background-image: url(../img/noite.jpg);
-	background-size: 1550px;
+	background-image: url(../img/Palmeiras.png);
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	position: relative;
 	margin-left: auto;
 	margin-right:auto;
-	width: 520px;
-	height: 720px;
+	width: 720px;
+	height: 520px;
 }
 
 footer {
@@ -84,17 +85,18 @@ footer {
 	font-size: 14px;
 	color: #FFF;
 	text-align: right;
+	position: absolute;
+	top: 760px;
+	left: 1030px;
 	text-shadow:0px 0px 8px #FF0;
-	padding-bottom: 3em;
-	padding-top: 4em;
-	padding-right: 3em;
 }
 
 /* Código Copiado */
 .inicio {
 	padding: 1em;
 	background-color: #000000AA;
-	color: #F90;
+	color: #FFF;
+	text-shadow:1px 1px 8px #00C9E9;
 	cursor: pointer;
 	font-family: NOZSTUDIO;
 	font-size: 11px;
@@ -105,11 +107,14 @@ footer {
 	width: 400px;
 	height: 350px;
 	top: 75px;
-	left: 65px;
+	left: 165px;
 }
 .fim {
 	padding: 1em;
-	background-color: #DD0000AA;
+	background-color: #000000AA;
+	color: #FC0000;
+	text-shadow:1px 1px 8px #CC0000;
+	border: 1px solid #FFF;
 	font-family: NOZSTUDIO;
 	font-size: 12px;
 	text-align: center;
@@ -119,130 +124,113 @@ footer {
 	width: 400px;
 	height: 200px;
 	top: 75px;
-	left: 65px;
+	left: 165px;
 	cursor: pointer;
 }
-
-/* Objetos */
-#laser {
-	background-color: #FF000040;
+.vitoria {
+	padding: 1em;
+	background-color: #f7d14aEE;
+	color: #FFF;
+	text-shadow:1px 1px 8px #00C9E9;
+	border: 1px solid #FFF;
+	font-family: NOZSTUDIO;
+	font-size: 12px;
+	text-align: center;
 	position: absolute;
-	width: 100%;
-	height: 5px;
-	top: 730px;
-	left: 0px;
-}
-#linha5 {
-	background-color: #6bafea11;
-	color: white;
-	text-align: left;
-	font-size: 8px;
-	position: absolute;
-	width: 100%;
-	height: 5px;
-	top: 300px;
-	left: 0px;
-}
-#linha10 {
-	background-color: #6bafea11;
-	color: white;
-	text-align: left;
-	font-size: 8px;
-	position: absolute;
-	width: 100%;
-	height: 5px;
-	top: 400px;
-	left: 0px;
-}
-#linha15 {
-	background-color: #6bafea11;
-	color: white;
-	text-align: left;
-	font-size: 8px;
-	position: absolute;
-	width: 100%;
-	height: 5px;
-	top: 520px;
-	left: 0px;
-}
-#linha20 {
-	background-color: #6bafea11;
-	color: white;
-	text-align: left;
-	font-size: 8px;
-	position: absolute;
-	width: 100%;
-	height: 5px;
-	top: 640px;
-	left: 0px;
-}
-#tecla_A {
-	background:linear-gradient(to bottom, #FFFFFF11 10%, #6bafea 100%);
+	margin-left: auto;
+	margin-right:auto;
+	width: 400px;
+	height: 200px;
+	top: 75px;
+	left: 165px;
 	cursor: pointer;
+}
+.pausa {
+	padding: 1em;
+	background-color: #000000AA;
+	color: #FFF;
+	text-shadow:1px 1px 8px #00C9E9;
+	border: 1px solid #FFF;
+	font-family: NOZSTUDIO;
+	font-size: 12px;
+	text-align: center;
 	position: absolute;
-	width: 20px;
-	height: 60px;
+	margin-left: auto;
+	margin-right:auto;
+	width: 400px;
+	height: 200px;
+	top: 75px;
+	left: 165px;
+	cursor: pointer;
+}
+#player {
+	width:30px;
+	height:30px;
+	background-image: url("../img/cesta.png");background-repeat: no-repeat;
+	border-radius: 100px;
+	position: absolute;
+	top: 500px;
+	left: 350px;
+}
+#maca {
+	background:linear-gradient(to bottom, #EA878a 10%, #CD131c 100%);
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
 	top: 0px;
 	left: 10px;
 }
-#tecla_B {
-	background:linear-gradient(to bottom, #FFFFFF11 10%, #6bafea 100%);
-	cursor: pointer;
+#melao {
+	background:linear-gradient(to bottom, #C2C800 10%, #86AB00 100%);
 	position: absolute;
-	width: 20px;
-	height: 60px;
+	width: 28px;
+	height: 28px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
 	top: 0px;
-	left: 10px;
+	left: 35px;
 }
-#tecla_C {
-	background:linear-gradient(to bottom, #FFFFFF11 10%, #6bafea 100%);
-	cursor: pointer;
+#donut {
+	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFFFFF11 100%);
 	position: absolute;
-	width: 20px;
-	height: 60px;
+	width: 10px;
+	height: 10px;
+	box-shadow: 0px 0px 1px 2px #DC0000;
+	border: 10px solid #772b00;
+	border-radius: 40px;
 	top: 0px;
-	left: 10px;
+	left: 70px;
 }
-#tecla_D {
-	background:linear-gradient(to bottom, #FFFFFF11 10%, #6bafea 100%);
-	cursor: pointer;
+#laranja {
+	background:linear-gradient(to bottom, #ffbd82 10%, #ff8a1e 100%);
 	position: absolute;
-	width: 20px;
-	height: 60px;
+	width: 18px;
+	height: 18px;
+	box-shadow: 0px 0px 1px 2px #00DC00;
+	border-radius: 40px;
 	top: 0px;
-	left: 10px;
+	left: 105px;
 }
-#tecla_E {
-	background:linear-gradient(to bottom, #FFFFFF11 10%, #6bafea 100%);
-	cursor: pointer;
+#refri {
+	background-image: url("../img/Refri.png");background-repeat: no-repeat;
 	position: absolute;
 	width: 20px;
-	height: 60px;
+	height: 29px;
+	box-shadow: 0px 0px 1px 2px #DC0000;
 	top: 0px;
-	left: 10px;
+	left: 130px;
 }
 
 /* Estrutura*/
-#titulo {
-	padding: 1em;
-	margin-top: -10px;
-	color: white;
-	background-color: #091426;
-	width: 692px;
-	height: 25px;
-	font-family: verdana;
-	font-size: 20px;
-	text-align: center;
-	margin-left: auto;
-	margin-right:auto;
-}
 #placar {
 	padding: 1em;
 	position: relative;
 	color: #E2DB00;
 	text-shadow:0px 0px 8px #000;
 	background-color: #000000DD;
-	width: 515px;
+	width: 716px;
 	height: 5px;
 	font-family: Digital;
 	font-size: 18px;
@@ -287,7 +275,7 @@ footer {
 }
 #tempo p {
 	position: absolute;
-	top: -54px;
-	left: 350px;
+	top: -53px;
+	left: 240px;
 }
 /* fim do Código Copiado*/
