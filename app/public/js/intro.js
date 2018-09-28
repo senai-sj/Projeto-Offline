@@ -1,2 +1,1 @@
-// intro
 alert("Bem vindo");
