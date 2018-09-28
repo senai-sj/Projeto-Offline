@@ -5,7 +5,7 @@ html, body {
 }
 /* Divs e Containers*/
 #header {
-	font-family: BankGothic Md BT, fantasy;
+	font-family: BankGothic Md BT, AR Destine, fantasy;
 	font-size: 60px;
 	text-align: center;
 	text-shadow:0px 0px 8px #FF0;
@@ -13,7 +13,7 @@ html, body {
 }
 
 #subheader {
-	font-family: BankGothic Md BT, fantasy;
+	font-family: BankGothic Md BT, AR Destine, fantasy;
 	font-size: 50px;
 	text-align: center;
 	text-shadow:0px 0px 8px #FF0;
@@ -80,6 +80,7 @@ footer {
 
 #default_button {
 	padding: 1em;
+	margin-top: 3px;
 	min-width: 180px;
 	max-width: 300px;
 	border: 0px solid #000;
