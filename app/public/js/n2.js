@@ -18,7 +18,7 @@ $(document).ready(function() {
 function start() {
 	$(".fim").hide();
 	$(".pausa").hide();
-	$(".inicio").hide();
+	$(".intro").hide();
 	$("#player").show();
 	$("#maca").show();
 	$("#melao").show();
@@ -217,12 +217,11 @@ function colisao() {
 		$("#maca").css("top", 0);
             pontos+=100;
             itens-=1;
-            if (itens <= 0) {
+            if (itens == 0) {
 				vitoria();
-				pontos-=100;
 			} 
             if (pontos<0) {
-                pontos=0;
+                 pontos=0;
             }
         }
     }
@@ -237,8 +236,7 @@ function colisao() {
 		$("#melao").css("top", 0);
             pontos+=300;
             itens-=1;
-            if (itens <= 0) {
-            	pontos-=300;
+            if (itens == 0) {
 				vitoria();
 			} 
             if (pontos<0) {
@@ -257,8 +255,7 @@ function colisao() {
 		$("#laranja").css("top", 0);
             pontos+=100;
             itens-=1;
-            if (itens <= 0) {
-            	pontos-=100;
+            if (itens == 0) {
 				vitoria();
 			} 
             if (pontos<0) {
@@ -276,7 +273,7 @@ function colisao() {
 		$("#donut").css("left",respawn);
 		$("#donut").css("top", 0);
 			itens-=1;
-			if (itens <= 0) {
+			if (itens == 0) {
 				vitoria();
 			} 
             if (vida == 0) {
@@ -295,7 +292,7 @@ function colisao() {
 		$("#refri").css("left",respawn);
 		$("#refri").css("top", 0);
 			itens-=1;
-			if (itens <= 0) {
+			if (itens == 0) {
 				vitoria();
 			} 
             if (vida == 0) {
@@ -344,6 +341,6 @@ function vitoria() {
 	musica.pause();
 	// gameover.play();
 
-	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n2.html'>Clique para ir para o próximo nível</a>");
+	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n3.html'>Clique para ir para o próximo nível</a>");
 	}
 }
