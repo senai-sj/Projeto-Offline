@@ -293,48 +293,64 @@ footer {
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	top: 0px;
-	left: 10px;
+	left: 8px;
+	top: 90px;
+}
+#maca_v {
+	background-image: url("../img/maçã_verde.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 8px;
+	top: 125px;
 }
 #melao {
-	background:linear-gradient(to bottom, #C2C800 10%, #86AB00 100%);
+	background-image: url("../img/melao.png");background-repeat: no-repeat;
 	position: absolute;
 	width: 28px;
 	height: 28px;
-	box-shadow: 0px 0px 1px 2px #00DC00;
-	border-radius: 40px;
-	top: 0px;
-	left: 35px;
+	left: 10px;
+	top: 204px;
+}
+#melancia {
+	background-image: url("../img/melancia.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 8px;
+	top: 233px;
 }
 #donut {
-	background:linear-gradient(to bottom, #FFFFFF11 10%, #FFFFFF11 100%);
+	background-image: url("../img/donut.png");background-repeat: no-repeat;
 	position: absolute;
-	width: 10px;
-	height: 10px;
-	box-shadow: 0px 0px 1px 2px #DC0000;
-	border: 10px solid #772b00;
-	border-radius: 40px;
-	top: 0px;
-	left: 70px;
+	width: 25px;
+	height: 25px;
+	top: 95px;
+	left: 535px;
 }
 #laranja {
-	background:linear-gradient(to bottom, #ffbd82 10%, #ff8a1e 100%);
+	background-image: url("../img/laranja.png");background-repeat: no-repeat;
 	position: absolute;
-	width: 18px;
-	height: 18px;
-	box-shadow: 0px 0px 1px 2px #00DC00;
-	border-radius: 40px;
-	top: 0px;
-	left: 105px;
+	width: 30px;
+	height: 30px;
+	left: 8px;
+	top: 160px;
 }
 #refri {
 	background-image: url("../img/Refri.png");background-repeat: no-repeat;
 	position: absolute;
 	width: 20px;
 	height: 29px;
-	box-shadow: 0px 0px 1px 2px #DC0000;
-	top: 0px;
-	left: 130px;
+	top: 135px;
+	left: 540px;
+}
+#miojo {
+	background-image: url("../img/miojo.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 20px;
+	height: 29px;
+	top: 190px;
+	left: 540px;
 }
 
 /* Estrutura*/
