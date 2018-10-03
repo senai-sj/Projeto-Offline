@@ -124,7 +124,7 @@ function movimento() {
 		var direita = parseInt($("#player").css("left"));
  		$("#player").css("left",direita+3);
 
- 		if (direita >= 720){
+ 		if (direita >= 700){
  			$("#player").css("left",direita-0);
  		}
 	}
