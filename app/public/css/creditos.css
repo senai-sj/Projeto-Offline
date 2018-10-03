@@ -79,18 +79,13 @@
 	color: #EEE;
 }
 .termos {
-	width: 500px;
-	min-height: 150px;
-	max-height: 1800px;
 	display:inline-block;
 	text-align: center;
 	font-size: 16px;
-	font-family: Old English Text MT;
+	font-family: Old English Text MT, georgia;
 	text-align: center;
 	border: 2px solid #000482;
-	background-image: url(../img/fundo_papel.jpg);
-	background-size:520px;
-	background-repeat: no-repeat;
+	background:linear-gradient(to bottom, #FFFFFFAA 10%, #FFFFFFEE);
 	color: #000;
 }
 .termos a{
