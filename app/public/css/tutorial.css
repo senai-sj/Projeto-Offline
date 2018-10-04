@@ -113,6 +113,9 @@ footer {
 #ng1 {position: absolute;top: 85px;left: 580px;font-weight: normal;}
 #ng2 {position: absolute;top: 125px;left: 580px;font-weight: normal;}
 #ng3 {position: absolute;top: 165px;left: 580px;font-weight: normal;}
+#ng4 {position: absolute;top: 215px;left: 580px;font-weight: normal;}
+#ng5 {position: absolute;top: 268px;left: 580px;font-weight: normal;}
+#ng6 {position: absolute;top: 300px;left: 580px;font-weight: normal;}
 
 #buttonrow {
 	padding: 1em;
@@ -152,14 +155,6 @@ footer {
 	left: 8px;
 	top: 233px;
 }
-#donut {
-	background-image: url("../img/donut.png");background-repeat: no-repeat;
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	top: 95px;
-	left: 535px;
-}
 #laranja {
 	background-image: url("../img/laranja.png");background-repeat: no-repeat;
 	position: absolute;
@@ -167,6 +162,38 @@ footer {
 	height: 30px;
 	left: 8px;
 	top: 160px;
+}
+#leite {
+	background-image: url("../img/leite.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 12px;
+	top: 270px;
+}
+#chocolate {
+	background-image: url("../img/chocolate.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 12px;
+	top: 305px;
+}
+#cereja {
+	background-image: url("../img/cerejas.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 15px;
+	top: 345px;
+}
+#donut {
+	background-image: url("../img/donut.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 95px;
+	left: 535px;
 }
 #refri {
 	background-image: url("../img/Refri.png");background-repeat: no-repeat;
@@ -183,4 +210,28 @@ footer {
 	height: 29px;
 	top: 190px;
 	left: 540px;
+}
+#choc_v {
+	background-image: url("../img/choc_veg.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 540px;
+	top: 235px;
+}
+#cigarro {
+	background-image: url("../img/cigarros.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 545px;
+	top: 283px;
+}
+#whiskey {
+	background-image: url("../img/whiskey.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 546px;
+	top: 308px;
 }

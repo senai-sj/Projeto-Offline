@@ -8,6 +8,8 @@ $(document).ready(function() {
 	$("#player").hide();
 	$("#maca").hide();
 	$("#melao").hide();
+	$("#maca_v").hide();
+	$("#melancia").hide();
 	$("#laranja").hide();
 	$("#refri").hide();
 	$("#donut").hide();
@@ -21,6 +23,8 @@ function start() {
 	$(".intro").hide();
 	$("#player").show();
 	$("#maca").show();
+	$("#maca_v").show();
+	$("#melancia").show();
 	$("#melao").show();
 	$("#laranja").show();
 	$("#refri").show();
@@ -37,6 +41,16 @@ function start() {
    	respawn = parseInt(Math.random()*515);
 	$("#melao").css("left",respawn);
 	$("#melao").css("top", 0);
+
+	posY = parseInt($("#melancia").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#melancia").css("left",respawn);
+	$("#melancia").css("top", 0);
+
+	posY = parseInt($("#maca_v").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#maca_v").css("left",respawn);
+	$("#maca_v").css("top", 0);
 
 	posY = parseInt($("#donut").css("top"));
    	respawn = parseInt(Math.random()*515);
@@ -57,7 +71,7 @@ function start() {
 	musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	musica.play();
 
-var itens = 20;
+var itens = 35;
 var vida = 3;
 var pontos = 0;
 var recorde = 0;
@@ -92,6 +106,10 @@ $(function() {
 	jogo.press[e.which] = false;
 	});
 
+	var gameover = document.getElementById('Discovery_Hit');
+	var victory = document.getElementById('Loping_Sting');
+
+
 });
 // Loop principal
 function loop() {
@@ -103,6 +121,8 @@ function loop() {
 	frutaA();
 	frutaB();
 	frutaC();
+	frutaD();
+	frutaE();
 	prodA();
 	prodB();
 	/* Colisão */
@@ -160,6 +180,26 @@ function frutaC() {
 		$("#laranja").css("top", 0);
 	}
 }
+function frutaD() {
+	posicaoY = parseFloat($("#maca_v").css("top"));
+	$("#maca_v").css("top",posicaoY+1.8);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#maca_v").css("left",respawn);
+		$("#maca_v").css("top", 0);
+	}
+}
+function frutaE() {
+	posicaoY = parseFloat($("#melancia").css("top"));
+	$("#melancia").css("top",posicaoY+2.4);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#melancia").css("left",respawn);
+		$("#melancia").css("top", 0);
+	}
+}
 function prodA() {
 	posicaoY = parseFloat($("#donut").css("top"));
 	$("#donut").css("top",posicaoY+2);
@@ -201,6 +241,14 @@ function colisao() {
     var fruta3Y = parseInt($("#laranja").css("top")) + $("#laranja").height();
     var fruta3L = parseInt($("#laranja").css("left"));
     var fruta3R = parseInt($("#laranja").css("left")) + $("#laranja").width();
+
+    var fruta4Y = parseInt($("#maca_v").css("top")) + $("#maca_v").height();
+    var fruta4L = parseInt($("#maca_v").css("left"));
+    var fruta4R = parseInt($("#maca_v").css("left")) + $("#maca_v").width();
+
+    var fruta5Y = parseInt($("#melancia").css("top")) + $("#melancia").height();
+    var fruta5L = parseInt($("#melancia").css("left"));
+    var fruta5R = parseInt($("#melancia").css("left")) + $("#melancia").width();
 
     var prod2Y = parseInt($("#refri").css("top")) + $("#refri").height();
     var prod2L = parseInt($("#refri").css("left"));
@@ -254,6 +302,44 @@ function colisao() {
 		$("#laranja").css("left",respawn);
 		$("#laranja").css("top", 0);
             pontos+=100;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
+            if (pontos<0) {
+                 pontos=0;
+            }
+        }
+    }
+        if(playerY <= fruta4Y){
+            if(
+            fruta4L >= playerL && fruta4L <= playerR ||
+            fruta4R >= playerL && fruta4R <= playerR
+        ){
+        posY = parseInt($("#maca_v").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#maca_v").css("left",respawn);
+		$("#maca_v").css("top", 0);
+            pontos+=100;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
+            if (pontos<0) {
+                 pontos=0;
+            }
+        }
+    }
+        if(playerY <= fruta5Y){
+            if(
+            fruta5L >= playerL && fruta5L <= playerR ||
+            fruta5R >= playerL && fruta5R <= playerR
+        ){
+        posY = parseInt($("#melancia").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#melancia").css("left",respawn);
+		$("#melancia").css("top", 0);
+            pontos+=750;
             itens-=1;
             if (itens == 0) {
 				vitoria();
@@ -328,7 +414,7 @@ function fim() {
 	
 	$(".fim").show();
 	musica.pause();
-	// gameover.play();
+	gameover.play();
 
 	$(".fim").html("<h1>Fim de Jogo</h1> <h1>Pontuação Final:"+pontos+"</h1><p>Clique aqui para jogar novamente</p>");
 	}
@@ -339,7 +425,7 @@ function vitoria() {
 	
 	$(".vitoria").show();
 	musica.pause();
-	// gameover.play();
+	victory.play();
 
 	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n3.html'>Clique para ir para o próximo nível</a>");
 	}
