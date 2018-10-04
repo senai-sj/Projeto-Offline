@@ -1,4 +1,6 @@
-//alert("!");
+function pausa() {
+alert("Jogo pausado, clique em OK para continuar");
+}
 
 $(document).ready(function() {
 	
@@ -334,7 +336,7 @@ function fim() {
 	
 	$(".fim").show();
 	musica.pause();
-	// gameover.play();
+	gameover.play();
 
 	$(".fim").html("<h1>Fim de Jogo</h1> <h1>Pontuação Final:"+pontos+"</h1><p>Clique aqui para jogar novamente</p>");
 	}
@@ -345,7 +347,7 @@ function vitoria() {
 	
 	$(".vitoria").show();
 	musica.pause();
-	// gameover.play();
+	victory.play();
 
 	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n2.html'>Clique para ir para o próximo nível</a>");
 	}

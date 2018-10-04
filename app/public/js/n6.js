@@ -1,4 +1,6 @@
-//alert("!");
+function pausa() {
+alert("Jogo pausado, clique em OK para continuar");
+}
 
 $(document).ready(function() {
 	
@@ -8,9 +10,14 @@ $(document).ready(function() {
 	$("#player").hide();
 	$("#maca").hide();
 	$("#melao").hide();
+	$("#miojo").hide();
+	$("#cereja").hide();
+	$("#maca_v").hide();
+	$("#melancia").hide();
 	$("#laranja").hide();
 	$("#refri").hide();
 	$("#donut").hide();
+	$("#cigarro").hide();
 
 
 });
@@ -21,10 +28,15 @@ function start() {
 	$(".intro").hide();
 	$("#player").show();
 	$("#maca").show();
+	$("#maca_v").show();
+	$("#melancia").show();
+	$("#miojo").show();
+	$("#cereja").show();
 	$("#melao").show();
 	$("#laranja").show();
 	$("#refri").show();
 	$("#donut").show();
+	$("#cigarro").show();
 
 
 	// Posicionamento 
@@ -37,6 +49,26 @@ function start() {
    	respawn = parseInt(Math.random()*515);
 	$("#melao").css("left",respawn);
 	$("#melao").css("top", 0);
+
+	posY = parseInt($("#melancia").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#melancia").css("left",respawn);
+	$("#melancia").css("top", 0);
+
+	posY = parseInt($("#cereja").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#cereja").css("left",respawn);
+	$("#cereja").css("top", 0);
+
+	posY = parseInt($("#miojo").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#miojo").css("left",respawn);
+	$("#miojo").css("top", 0);
+
+	posY = parseInt($("#maca_v").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#maca_v").css("left",respawn);
+	$("#maca_v").css("top", 0);
 
 	posY = parseInt($("#donut").css("top"));
    	respawn = parseInt(Math.random()*515);
@@ -52,12 +84,17 @@ function start() {
    	respawn = parseInt(Math.random()*515);
 	$("#refri").css("left",respawn);
 	$("#refri").css("top", 0);
+
+	posY = parseInt($("#cigarro").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#cigarro").css("left",respawn);
+	$("#cigarro").css("top", 0);
 	
 	var musica = document.getElementById('musica');
 	musica.addEventListener("ended",function(){musica.currentTime=0;musica.play();},false);
 	musica.play();
 
-var itens = 20;
+var itens = 45;
 var vida = 3;
 var pontos = 0;
 var recorde = 0;
@@ -92,6 +129,10 @@ $(function() {
 	jogo.press[e.which] = false;
 	});
 
+	var gameover = document.getElementById('Discovery_Hit');
+	var victory = document.getElementById('Loping_Sting');
+
+
 });
 // Loop principal
 function loop() {
@@ -103,8 +144,13 @@ function loop() {
 	frutaA();
 	frutaB();
 	frutaC();
+	frutaD();
+	frutaE();
+	frutaF();
 	prodA();
 	prodB();
+	prodC();
+	prodD();
 	/* Colisão */
 	colisao();
 }
@@ -160,6 +206,36 @@ function frutaC() {
 		$("#laranja").css("top", 0);
 	}
 }
+function frutaD() {
+	posicaoY = parseFloat($("#maca_v").css("top"));
+	$("#maca_v").css("top",posicaoY+1.8);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#maca_v").css("left",respawn);
+		$("#maca_v").css("top", 0);
+	}
+}
+function frutaE() {
+	posicaoY = parseFloat($("#melancia").css("top"));
+	$("#melancia").css("top",posicaoY+2.4);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#melancia").css("left",respawn);
+		$("#melancia").css("top", 0);
+	}
+}
+function frutaF() {
+	posicaoY = parseFloat($("#cereja").css("top"));
+	$("#cereja").css("top",posicaoY+2);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#cereja").css("left",respawn);
+		$("#cereja").css("top", 0);
+	}
+}
 function prodA() {
 	posicaoY = parseFloat($("#donut").css("top"));
 	$("#donut").css("top",posicaoY+2);
@@ -178,6 +254,26 @@ function prodB() {
 		respawn = parseInt(Math.random()*720);
 		$("#refri").css("left",respawn);
 		$("#refri").css("top", 0);
+	}
+}
+function prodC() {
+	posicaoY = parseFloat($("#cigarro").css("top"));
+	$("#cigarro").css("top",posicaoY+1.6);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#cigarro").css("left",respawn);
+		$("#cigarro").css("top", 0);
+	}
+}
+function prodD() {
+	posicaoY = parseFloat($("#miojo").css("top"));
+	$("#miojo").css("top",posicaoY+1.4);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#miojo").css("left",respawn);
+		$("#miojo").css("top", 0);
 	}
 }
 // Colisão
@@ -202,33 +298,29 @@ function colisao() {
     var fruta3L = parseInt($("#laranja").css("left"));
     var fruta3R = parseInt($("#laranja").css("left")) + $("#laranja").width();
 
+    var fruta4Y = parseInt($("#maca_v").css("top")) + $("#maca_v").height();
+    var fruta4L = parseInt($("#maca_v").css("left"));
+    var fruta4R = parseInt($("#maca_v").css("left")) + $("#maca_v").width();
+
+    var fruta5Y = parseInt($("#melancia").css("top")) + $("#melancia").height();
+    var fruta5L = parseInt($("#melancia").css("left"));
+    var fruta5R = parseInt($("#melancia").css("left")) + $("#melancia").width();
+
+    var fruta6Y = parseInt($("#cereja").css("top")) + $("#cereja").height();
+    var fruta6L = parseInt($("#cereja").css("left"));
+    var fruta6R = parseInt($("#cereja").css("left")) + $("#cereja").width();
+
     var prod2Y = parseInt($("#refri").css("top")) + $("#refri").height();
     var prod2L = parseInt($("#refri").css("left"));
     var prod2R = parseInt($("#refri").css("left")) + $("#refri").width();
 
-    // var fruta4Y = parseInt($("#maca").css("top")) + $("#maca").height();
-    // var fruta4L = parseInt($("#maca").css("left"));
-    // var fruta4R = parseInt($("#maca").css("left")) + $("#maca").width();
+    var prod3Y = parseInt($("#cigarro").css("top")) + $("#cigarro").height();
+    var prod3L = parseInt($("#cigarro").css("left"));
+    var prod3R = parseInt($("#cigarro").css("left")) + $("#cigarro").width();
 
-    // var prod3Y = parseInt($("#donut").css("top")) + $("#donut").height();
-    // var prod3L = parseInt($("#donut").css("left"));
-    // var prod3R = parseInt($("#donut").css("left")) + $("#donut").width();
-
-    // var fruta5Y = parseInt($("#melao").css("top")) + $("#melao").height();
-    // var fruta5L = parseInt($("#melao").css("left"));
-    // var fruta5R = parseInt($("#melao").css("left")) + $("#melao").width();
-
-    // var fruta6Y = parseInt($("#laranja").css("top")) + $("#laranja").height();
-    // var fruta6L = parseInt($("#laranja").css("left"));
-    // var fruta6R = parseInt($("#laranja").css("left")) + $("#laranja").width();
-
-    // var prod4Y = parseInt($("#refri").css("top")) + $("#refri").height();
-    // var prod4L = parseInt($("#refri").css("left"));
-    // var prod4R = parseInt($("#refri").css("left")) + $("#refri").width();
-
-    // var prod5Y = parseInt($("#refri").css("top")) + $("#refri").height();
-    // var prod5L = parseInt($("#refri").css("left"));
-    // var prod5R = parseInt($("#refri").css("left")) + $("#refri").width();
+    var prod4Y = parseInt($("#miojo").css("top")) + $("#miojo").height();
+    var prod4L = parseInt($("#miojo").css("left"));
+    var prod4R = parseInt($("#miojo").css("left")) + $("#miojo").width();
 
        if(playerY <= fruta1Y){
              if(
@@ -287,6 +379,63 @@ function colisao() {
             }
         }
     }
+        if(playerY <= fruta4Y){
+            if(
+            fruta4L >= playerL && fruta4L <= playerR ||
+            fruta4R >= playerL && fruta4R <= playerR
+        ){
+        posY = parseInt($("#maca_v").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#maca_v").css("left",respawn);
+		$("#maca_v").css("top", 0);
+            pontos+=100;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
+            if (pontos<0) {
+                 pontos=0;
+            }
+        }
+    }
+        if(playerY <= fruta5Y){
+            if(
+            fruta5L >= playerL && fruta5L <= playerR ||
+            fruta5R >= playerL && fruta5R <= playerR
+        ){
+        posY = parseInt($("#melancia").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#melancia").css("left",respawn);
+		$("#melancia").css("top", 0);
+            pontos+=750;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
+            if (pontos<0) {
+                 pontos=0;
+            }
+        }
+    }
+        if(playerY <= fruta6Y){
+            if(
+            fruta6L >= playerL && fruta6L <= playerR ||
+            fruta6R >= playerL && fruta6R <= playerR
+        ){
+        posY = parseInt($("#cereja").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#cereja").css("left",respawn);
+		$("#cereja").css("top", 0);
+            pontos+=50;
+            itens-=1;
+            if (itens == 0) {
+				vitoria();
+			} 
+            if (pontos<0) {
+                 pontos=0;
+            }
+        }
+    }
     	if(playerY <= prod1Y){
              if(
             prod1L >= playerL && prod1L <= playerR ||
@@ -325,121 +474,44 @@ function colisao() {
             vida-=1;
         }
     }
-  //   	if(playerY <= fruta4Y){
-  //            if(
-  //           fruta4L >= playerL && fruta4L <= playerR ||
-  //           fruta4R >= playerL && fruta4R <= playerR
-  //       ){
-  //       posY = parseInt($("#maca").css("top"));
-	 //   	respawn = parseInt(Math.random()*720);
-		// $("#maca").css("left",respawn);
-		// $("#maca").css("top", 0);
-  //           pontos+=100;
-  //           itens-=1;
-  //           if (itens == 0) {
-		// 		vitoria();
-		// 	} 
-  //           if (pontos<0) {
-  //                pontos=0;
-  //           }
-  //       }
-  //   }
-  //   	if(playerY <= fruta5Y){
-  //            if(
-  //           fruta5L >= playerL && fruta5L <= playerR ||
-  //           fruta5R >= playerL && fruta5R <= playerR
-  //       ){
-  //       posY = parseInt($("#melao").css("top"));
-	 //   	respawn = parseInt(Math.random()*720);
-		// $("#melao").css("left",respawn);
-		// $("#melao").css("top", 0);
-  //           pontos+=300;
-  //           itens-=1;
-  //           if (itens == 0) {
-		// 		vitoria();
-		// 	} 
-  //           if (pontos<0) {
-  //                pontos=0;
-  //           }
-  //       }
-  //   }
-  //       if(playerY <= fruta6Y){
-  //           if(
-  //           fruta6L >= playerL && fruta6L <= playerR ||
-  //           fruta6R >= playerL && fruta6R <= playerR
-  //       ){
-  //       posY = parseInt($("#laranja").css("top"));
-	 //   	respawn = parseInt(Math.random()*720);
-		// $("#laranja").css("left",respawn);
-		// $("#laranja").css("top", 0);
-  //           pontos+=100;
-  //           itens-=1;
-  //           if (itens == 0) {
-		// 		vitoria();
-		// 	} 
-  //           if (pontos<0) {
-  //                pontos=0;
-  //           }
-  //       }
-  //   }
-  //   	if(playerY <= prod3Y){
-  //            if(
-  //           prod3L >= playerL && prod3L <= playerR ||
-  //           prod3R >= playerL && prod3R <= playerR
-  //       ){
-  //       posY = parseInt($("#donut").css("top"));
-	 //   	respawn = parseInt(Math.random()*720);
-		// $("#donut").css("left",respawn);
-		// $("#donut").css("top", 0);
-		// 	itens-=1;
-		// 	if (itens == 0) {
-		// 		vitoria();
-		// 	} 
-  //           if (vida == 0) {
-  //               fim();
-  //           }
-  //           vida-=1;
-  //       }
-  //   }
-  //   	if(playerY <= prod4Y){
-  //            if(
-  //           prod4L >= playerL && prod4L <= playerR ||
-  //           prod4R >= playerL && prod4R <= playerR
-  //       ){
-  //       posY = parseInt($("#refri").css("top"));
-	 //   	respawn = parseInt(Math.random()*720);
-		// $("#refri").css("left",respawn);
-		// $("#refri").css("top", 0);
-		// 	itens-=1;
-		// 	if (itens == 0) {
-		// 		vitoria();
-		// 	} 
-  //           if (vida == 0) {
-  //               fim();
-  //           }
-  //           vida-=1;
-  //       }
-  //   }
-
-  // 	if(playerY <= prod5Y){
-  //            if(
-  //           prod5L >= playerL && prod5L <= playerR ||
-  //           prod5R >= playerL && prod5R <= playerR
-  //       ){
-  //       posY = parseInt($("#refri").css("top"));
-	 //   	respawn = parseInt(Math.random()*720);
-		// $("#refri").css("left",respawn);
-		// $("#refri").css("top", 0);
-		// 	itens-=1;
-		// 	if (itens == 0) {
-		// 		vitoria();
-		// 	} 
-  //           if (vida == 0) {
-  //               fim();
-  //           }
-  //           vida-=1;
-  //       }
-  //   }
+        if(playerY <= prod3Y){
+             if(
+            prod3L >= playerL && prod3L <= playerR ||
+            prod3R >= playerL && prod3R <= playerR
+        ){
+        posY = parseInt($("#cigarro").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#cigarro").css("left",respawn);
+		$("#cigarro").css("top", 0);
+			itens-=1;
+			if (itens == 0) {
+				vitoria();
+			} 
+            if (vida == 0) {
+                fim();
+            }
+            vida-=2;
+        }
+    }
+    if(playerY <= prod4Y){
+             if(
+            prod4L >= playerL && prod4L <= playerR ||
+            prod4R >= playerL && prod4R <= playerR
+        ){
+        posY = parseInt($("#miojo").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#miojo").css("left",respawn);
+		$("#miojo").css("top", 0);
+			itens-=1;
+			if (itens == 0) {
+				vitoria();
+			} 
+            if (vida == 0) {
+                fim();
+            }
+            vida-=1;
+        }
+    }
 }
         
 // Códigos do HUD
@@ -467,7 +539,7 @@ function fim() {
 	
 	$(".fim").show();
 	musica.pause();
-	// gameover.play();
+	gameover.play();
 
 	$(".fim").html("<h1>Fim de Jogo</h1> <h1>Pontuação Final:"+pontos+"</h1><p>Clique aqui para jogar novamente</p>");
 	}
@@ -478,8 +550,8 @@ function vitoria() {
 	
 	$(".vitoria").show();
 	musica.pause();
-	// gameover.play();
+	victory.play();
 
-	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n3.html'>Clique para ir para o próximo nível</a>");
+	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='N7.html'>Clique para ir para o próximo nível</a>");
 	}
 }
