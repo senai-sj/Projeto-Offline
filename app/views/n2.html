@@ -17,6 +17,8 @@
 	<div id="player"><br></div>
 	<div id="maca"><br></div>
 	<div id="melao"><br></div>
+	<div id="maca_v"><br></div>
+	<div id="melancia"><br></div>
 	<div id="donut"><br></div>
 	<div id="laranja"><br></div>
 	<div id="refri"><br></div>
@@ -31,12 +33,14 @@
 <div id="tempo" onload="cronos()"></div>
 <div id="saude" onload="vidas()"></div>
 
-<audio src="../public/sons/Motherlode.mp3" preload="auto" id="musica"></audio>
+<audio src="../public/sons/Modern_Jazz_Samba.mp3" preload="auto" id="musica"></audio>
+<audio src="../public/sons/Discovery_Hit.mp3" preload="auto" id="gameover"></audio>
+<audio src="../public/sons/Loping_Sting.mp3" preload="auto" id="victory"></audio>
 
 <div id="buttonrow">
 	<a href="menu.html" id="default_button">Sair</a>
 	<a href="n2.html" id="default_button">Reiniciar</a>
-	<a href="fases.html" id="default_button">Selecionar Fase</a>
+	<button id="default_button" onclick="pausa();">Pausar</button>
 </div>
 <footer>
 	Version 0.3 &copy; Copyright SENAI - All Rights Reserved

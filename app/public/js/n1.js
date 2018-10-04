@@ -92,6 +92,9 @@ $(function() {
 	jogo.press[e.which] = false;
 	});
 
+	var gameover = document.getElementById('Discovery_Hit');
+	var victory = document.getElementById('Loping_Sting');
+
 });
 // Loop principal
 function loop() {

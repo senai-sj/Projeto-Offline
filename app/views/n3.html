@@ -6,7 +6,7 @@
 	<link rel="icon" href="../favicon-16x16.png">
 	<link href="../public/css/jogo.css" type="text/css" rel="stylesheet">
 	<script src="../public/js/Jquery.js"></script>
-	<script src="../public/js/n1.js"></script>
+	<script src="../public/js/n3.js"></script>
 </head>
 <body class="fundo">
 <div id="subheader">Fase 3/10</div>
@@ -17,9 +17,12 @@
 	<div id="player"><br></div>
 	<div id="maca"><br></div>
 	<div id="melao"><br></div>
+	<div id="maca_v"><br></div>
+	<div id="melancia"><br></div>
 	<div id="donut"><br></div>
 	<div id="laranja"><br></div>
 	<div id="refri"><br></div>
+	<div id="cigarro"><br></div>
 <!-- 	<div class="pausa" onclick="resumir()">
 		<h1>Jogo Pausado</h1>
 		<p>Clique aqui para continuar</p>
@@ -31,7 +34,9 @@
 <div id="tempo" onload="cronos()"></div>
 <div id="saude" onload="vidas()"></div>
 
-<audio src="../public/sons/Motherlode.mp3" preload="auto" id="musica"></audio>
+<audio src="../public/sons/Vivacity.mp3" preload="auto" id="musica"></audio>
+<audio src="../public/sons/Discovery_Hit.mp3" preload="auto" id="gameover"></audio>
+<audio src="../public/sons/Loping_Sting.mp3" preload="auto" id="victory"></audio>
 
 <div id="buttonrow">
 	<a href="menu.html" id="default_button">Sair</a>
@@ -39,7 +44,7 @@
 	<a href="fases.html" id="default_button">Selecionar Fase</a>
 </div>
 <footer>
-	Version 0.3 &copy; Copyright SENAI - All Rights Reserved
+	Version 0.4 &copy; Copyright SENAI - All Rights Reserved
 </footer>
 </body>
 </html>

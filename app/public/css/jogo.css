@@ -344,6 +344,14 @@ footer {
 	top: 135px;
 	left: 540px;
 }
+#leite {
+	background-image: url("../img/leite.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 12px;
+	top: 270px;
+}
 #miojo {
 	background-image: url("../img/miojo.png");background-repeat: no-repeat;
 	position: absolute;
@@ -351,6 +359,30 @@ footer {
 	height: 29px;
 	top: 190px;
 	left: 540px;
+}
+#choc_v {
+	background-image: url("../img/choc_veg.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 540px;
+	top: 235px;
+}
+#cigarro {
+	background-image: url("../img/cigarros.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 545px;
+	top: 283px;
+}
+#whiskey {
+	background-image: url("../img/whiskey.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 546px;
+	top: 308px;
 }
 
 /* Estrutura*/

@@ -179,6 +179,14 @@ footer {
 	left: 12px;
 	top: 305px;
 }
+#cereja {
+	background-image: url("../img/cerejas.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 15px;
+	top: 345px;
+}
 #donut {
 	background-image: url("../img/donut.png");background-repeat: no-repeat;
 	position: absolute;
