@@ -1,4 +1,6 @@
-//alert("!");
+function pausa() {
+alert("Jogo pausado, clique em OK para continuar");
+}
 
 $(document).ready(function() {
 	
@@ -8,6 +10,7 @@ $(document).ready(function() {
 	$("#player").hide();
 	$("#maca").hide();
 	$("#melao").hide();
+	$("#miojo").hide();
 	$("#maca_v").hide();
 	$("#melancia").hide();
 	$("#laranja").hide();
@@ -27,6 +30,7 @@ function start() {
 	$("#maca_v").show();
 	$("#melancia").show();
 	$("#melao").show();
+	$("#miojo").show();
 	$("#laranja").show();
 	$("#refri").show();
 	$("#donut").show();
@@ -48,6 +52,11 @@ function start() {
    	respawn = parseInt(Math.random()*515);
 	$("#melancia").css("left",respawn);
 	$("#melancia").css("top", 0);
+
+	posY = parseInt($("#miojo").css("top"));
+   	respawn = parseInt(Math.random()*515);
+	$("#miojo").css("left",respawn);
+	$("#miojo").css("top", 0);
 
 	posY = parseInt($("#maca_v").css("top"));
    	respawn = parseInt(Math.random()*515);
@@ -133,6 +142,7 @@ function loop() {
 	prodA();
 	prodB();
 	prodC();
+	prodD();
 	/* Colisão */
 	colisao();
 }
@@ -238,6 +248,16 @@ function prodC() {
 		$("#cigarro").css("top", 0);
 	}
 }
+function prodD() {
+	posicaoY = parseFloat($("#miojo").css("top"));
+	$("#miojo").css("top",posicaoY+1.4);
+
+	if (posicaoY >= 520) {
+		respawn = parseInt(Math.random()*720);
+		$("#miojo").css("left",respawn);
+		$("#miojo").css("top", 0);
+	}
+}
 // Colisão
 function colisao() {
     var playerY = parseInt($("#player").css("top"));
@@ -275,6 +295,10 @@ function colisao() {
     var prod3Y = parseInt($("#cigarro").css("top")) + $("#cigarro").height();
     var prod3L = parseInt($("#cigarro").css("left"));
     var prod3R = parseInt($("#cigarro").css("left")) + $("#cigarro").width();
+
+    var prod4Y = parseInt($("#miojo").css("top")) + $("#miojo").height();
+    var prod4L = parseInt($("#miojo").css("left"));
+    var prod4R = parseInt($("#miojo").css("left")) + $("#miojo").width();
 
        if(playerY <= fruta1Y){
              if(
@@ -428,6 +452,25 @@ function colisao() {
             vida-=2;
         }
     }
+    if(playerY <= prod4Y){
+             if(
+            prod4L >= playerL && prod4L <= playerR ||
+            prod4R >= playerL && prod4R <= playerR
+        ){
+        posY = parseInt($("#miojo").css("top"));
+	   	respawn = parseInt(Math.random()*720);
+		$("#miojo").css("left",respawn);
+		$("#miojo").css("top", 0);
+			itens-=1;
+			if (itens == 0) {
+				vitoria();
+			} 
+            if (vida == 0) {
+                fim();
+            }
+            vida-=1;
+        }
+    }
 }
         
 // Códigos do HUD
@@ -468,6 +511,6 @@ function vitoria() {
 	musica.pause();
 	victory.play();
 
-	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n4.html'>Clique para ir para o próximo nível</a>");
+	$(".vitoria").html("<h1>Parabéns!</h1> <h1>Pontuação Final:"+pontos+"</h1><a href='n5.html'>Clique para ir para o próximo nível</a>");
 	}
 }

@@ -1,4 +1,6 @@
-//alert("!");
+function pausa() {
+alert("Jogo pausado, clique em OK para continuar");
+}
 
 $(document).ready(function() {
 	

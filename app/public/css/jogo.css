@@ -125,7 +125,7 @@ html, body {
 }
 .bg6 {
 	padding: 1em;
-	background-image: url(../img/porto.png);
+	background-image: url(../img/neon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
@@ -136,7 +136,7 @@ html, body {
 }
 .bg7 {
 	padding: 1em;
-	background-image: url(../img/neon.png);
+	background-image: url(../img/porto.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
@@ -320,14 +320,6 @@ footer {
 	left: 8px;
 	top: 233px;
 }
-#donut {
-	background-image: url("../img/donut.png");background-repeat: no-repeat;
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	top: 95px;
-	left: 535px;
-}
 #laranja {
 	background-image: url("../img/laranja.png");background-repeat: no-repeat;
 	position: absolute;
@@ -336,14 +328,6 @@ footer {
 	left: 8px;
 	top: 160px;
 }
-#refri {
-	background-image: url("../img/Refri.png");background-repeat: no-repeat;
-	position: absolute;
-	width: 20px;
-	height: 29px;
-	top: 135px;
-	left: 540px;
-}
 #leite {
 	background-image: url("../img/leite.png");background-repeat: no-repeat;
 	position: absolute;
@@ -351,6 +335,38 @@ footer {
 	height: 30px;
 	left: 12px;
 	top: 270px;
+}
+#chocolate {
+	background-image: url("../img/chocolate.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 12px;
+	top: 305px;
+}
+#cereja {
+	background-image: url("../img/cerejas.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 15px;
+	top: 345px;
+}
+#donut {
+	background-image: url("../img/donut.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 95px;
+	left: 535px;
+}
+#refri {
+	background-image: url("../img/Refri.png");background-repeat: no-repeat;
+	position: absolute;
+	width: 20px;
+	height: 29px;
+	top: 135px;
+	left: 540px;
 }
 #miojo {
 	background-image: url("../img/miojo.png");background-repeat: no-repeat;
