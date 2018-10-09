@@ -59,14 +59,14 @@
 #form li {margin-bottom: 6px;}
 
 footer {
+	position: absolute;
 	font-family: OpenDyslexic;
 	font-size: 14px;
 	color: #FFF;
 	text-align: right;
 	text-shadow:0px 0px 8px #00FFA0;
-	padding-bottom: 3em;
-	padding-top: 18px;
-	padding-right: 3em;
+	top: 175%;
+	left: 60%;
 }
 
 .alinhamento {

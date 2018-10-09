@@ -678,7 +678,7 @@ function colisao() {
             if (vida == 0) {
                 fim();
             }
-            vida-=1;
+            vida-=2;
         }
     }
 }

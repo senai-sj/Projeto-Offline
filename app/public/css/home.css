@@ -1,10 +1,22 @@
 @font-face {
+	font-family: NOZSTUDIO;
+	src:url(../fonts/NOZSTUDIO.TTF);
+}
+@font-face {
+	font-family: Digital;
+	src:url(../fonts/Digital.TTF);
+}
+@font-face {
 	font-family: Pepperoni;
 	src:url(../fonts/pepperoni_pizza.TTF);
 }
 @font-face {
 	font-family: Neigfriste;
 	src:url(../fonts/Neigfriste.TTF);
+}
+@font-face {
+	font-family: OpenDyslexic;
+	src:url(../fonts/OpenDyslexic.TTF);
 }
 
 html, body {
@@ -16,7 +28,7 @@ html, body {
 /* Divs e Containers*/
 #header {
 	font-family: Pepperoni;
-	font-size: 60px;
+	font-size: 50px;
 	text-align: center;
 	text-shadow:0px 0px 15px #F00;
 	color: #F90;
@@ -24,7 +36,7 @@ html, body {
 
 #subheader {
 	font-family: Pepperoni;
-	font-size: 50px;
+	font-size: 30px;
 	text-align: center;
 	text-shadow:0px 0px 8px #00B8C9;
 	color: #FFF;
@@ -76,11 +88,12 @@ html, body {
 #form li {margin-bottom: 6px;}
 
 footer {
-	font-family: Neigfriste;
-	font-size: 16px;
+	position: absolute;
+	font-family: OpenDyslexic;
+	font-size: 14px;
 	color: #FFF;
 	text-align: right;
 	text-shadow:0px 0px 8px #00FFA0;
-	padding-top: 26em;
-	padding-right: 3em;
+	top: 95%;
+	left: 60%;
 }

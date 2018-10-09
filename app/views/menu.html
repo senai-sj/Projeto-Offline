@@ -2,16 +2,27 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>SlideQuest - Menu Principal</title>
+	<title>Frutorama - Menu Principal</title>
+	<script src="../public/js/Jquery.js"></script>
 	<script src="../public/js/intro.js"></script>
 	<link rel="icon" href="../favicon-16x16.png">
 	<link href="../public/css/design.css" type="text/css" rel="stylesheet">
 </head>
-<body class="fundo" onload="inicio();">
+<body class="fundo" onload="preparar();">
 	<div id="header">
-		<h1>Slide Quest</h1>
+		<h1>Frutorama</h1>
 	</div>
 	<h1 id="subheader">Menu Principal</h1>
+	<div class="intro" onclick="inicio()">
+		<h1>Bem Vindo!</h1>
+		<h3>Comunicado</h3>
+		<p>Olá. Devido as novas políticas de privacidade</p>
+		<p>alguns navegadores precisam que o usuário</p>
+		<p>interaja com a página para que certas funções</p>
+		<p>aconteçam ou sejam executadas.</p>
+		<p>Para avançar para a página principal, clique</p>
+		<p>em qualquer região deste comunicado.</p>
+	</div>
 	<div id="form">
 		<a href="fases.html" id="default_button">Iniciar</a><br>
 		<a href="creditos.html" id="default_button">Creditos</a><br>
@@ -20,7 +31,7 @@
 	</div>
 <audio src="../public/sons/Funkorama.mp3" preload="auto" id="music0"></audio>
 <audio src="../public/sons/Mandeville.mp3" preload="auto" id="music1"></audio>
-<audio src="../public/sons/DD_Groove.mp3" preload="auto" id="music2"></audio>
+<audio src="../public/sons/District_Four.mp3" preload="auto" id="music2"></audio>
 <footer>
 	Versão 0.7 &copy; Copyright SENAI - All Rights Reserved (Versão OFFLINE)
 </footer>
