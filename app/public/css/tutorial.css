@@ -1,19 +1,39 @@
-html, body {
+@font-face {
+	font-family: NOZSTUDIO;
+	src:url(../fonts/NOZSTUDIO.TTF);
+}
+@font-face {
+	font-family: Digital;
+	src:url(../fonts/Digital.TTF);
+}
+@font-face {
+	font-family: Pepperoni;
+	src:url(../fonts/pepperoni_pizza.TTF);
+}
+@font-face {
+	font-family: Neigfriste;
+	src:url(../fonts/Neigfriste.TTF);
+}
+@font-face {
+	font-family: OpenDyslexic;
+	src:url(../fonts/OpenDyslexic.TTF);
+
+}html, body {
 	height: 60%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 /* Divs e Containers*/
 #header {
-	font-family: BankGothic Md BT,AR Destine, fantasy;
+	font-family: Pepperoni;
 	font-size: 60px;
 	text-align: center;
-	text-shadow:0px 0px 8px #00B8C9;
-	color: #FFF;
+	text-shadow:0px 0px 8px #F00;
+	color: #F90;
 }
 
 #subheader {
-	font-family: BankGothic Md BT,Ar Destine, fantasy;
+	font-family: Pepperoni;
 	font-size: 50px;
 	text-align: center;
 	text-shadow:0px 0px 8px #00B8C9;
@@ -29,7 +49,7 @@ html, body {
 	border: 1px solid white;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: verdana;
+	font-family: OpenDyslexic;
 	font-size: 15px;
 	text-align: center;
 	color: #FFF;
@@ -39,13 +59,13 @@ html, body {
 #form li {margin-bottom: 6px;}
 
 footer {
-	font-family: verdana;
+	font-family: OpenDyslexic;
 	font-size: 14px;
 	color: #FFF;
 	text-align: right;
-	text-shadow:0px 0px 8px #00B8C9;
+	text-shadow:0px 0px 8px #F00;
 	padding-bottom: 3em;
-	padding-top: 2em;
+	padding-top: 18px;
 	padding-right: 3em;
 }
 
@@ -68,7 +88,7 @@ footer {
 	cursor:pointer;
 	-webkit-transition: .5s;
 	transition: .5s;
-	font-family: Humnst777 BT, calibri, arial;
+	font-family: Neigfriste;
 	font-size: 18px;
 	padding:6px 10px;
 	text-decoration:none;
@@ -94,7 +114,7 @@ footer {
 
 #lista{
 	padding: 1em;
-	padding-left: 3em;
+	padding-left: 4em;
 	width: 800px;
 	height: 450px;
 	position: relative;
@@ -102,8 +122,8 @@ footer {
 	border: 1px solid white;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: verdana;
-	font-size: 16px;
+	font-family: OpenDyslexic;
+	font-size: 13px;
 	text-align: left;
 	color: #FFF;
 }

@@ -1,14 +1,26 @@
 @font-face {
+	font-family: NOZSTUDIO;
+	src:url(../fonts/NOZSTUDIO.TTF);
+}
+@font-face {
 	font-family: Digital;
 	src:url(../fonts/Digital.TTF);
 }
 @font-face {
-	font-family: NOZSTUDIO;
-	src:url(../fonts/NOZSTUDIO.TTF);
+	font-family: Pepperoni;
+	src:url(../fonts/pepperoni_pizza.TTF);
+}
+@font-face {
+	font-family: Neigfriste;
+	src:url(../fonts/Neigfriste.TTF);
+}
+@font-face {
+	font-family: OpenDyslexic;
+	src:url(../fonts/OpenDyslexic.TTF);
 }
 
 #header {
-	font-family: BankGothic Md BT,AR Destine, fantasy;
+	font-family: Pepperoni;
 	font-size: 40px;
 	text-align: center;
 	text-shadow:0px 0px 8px #FF0;
@@ -17,7 +29,7 @@
 
 #subheader {
 	padding: 5px;
-	font-family: BankGothic Md BT,AR Destine, fantasy;
+	font-family: Pepperoni;
 	font-size: 45px;
 	font-style: italic;
 	text-align: center;
@@ -42,7 +54,7 @@ html, body {
 	cursor:pointer;
 	-webkit-transition: .5s;
 	transition: .5s;
-	font-family: Humnst777 BT, calibri, arial;
+	font-family: Neigfriste;
 	font-size: 18px;
 	padding:6px 10px;
 	text-decoration:none;
@@ -180,14 +192,14 @@ html, body {
 }
 
 footer {
-	font-family: verdana;
+	font-family: OpenDyslexic;
 	font-size: 14px;
 	color: #FFF;
 	text-align: right;
 	position: absolute;
-	top: 760px;
+	top: 740px;
 	left: 1030px;
-	text-shadow:0px 0px 8px #FF0;
+	text-shadow:0px 0px 8px #F00;
 }
 
 /* Código Copiado */
