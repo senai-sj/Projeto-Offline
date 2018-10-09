@@ -191,17 +191,6 @@ html, body {
 	height: 520px;
 }
 
-footer {
-	font-family: OpenDyslexic;
-	font-size: 14px;
-	color: #FFF;
-	text-align: right;
-	position: absolute;
-	top: 740px;
-	left: 1030px;
-	text-shadow:0px 0px 8px #F00;
-}
-
 /* Código Copiado */
 .inicio {
 	padding: 1em;
